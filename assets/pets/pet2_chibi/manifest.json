@@ -1,0 +1,347 @@
+{
+  "id": "pet2_chibi",
+  "display_name": "Pet 2 Chibi Girl",
+  "image": "spritesheet.png",
+  "source_image": "../../source/pet2_chibi_reference_sheet.png",
+  "columns": 12,
+  "rows": 14,
+  "cell_width": 192,
+  "cell_height": 208,
+  "frame_duration_ms": 280,
+  "personality_tags": [
+    "cute",
+    "social",
+    "gamer",
+    "cheerful",
+    "playful",
+    "streamer",
+    "competitive"
+  ],
+  "interaction_tags": [
+    "greet",
+    "wave_to_other_pet",
+    "sit_together",
+    "play_together",
+    "follow",
+    "celebrate_together"
+  ],
+  "compatible_group_actions": [
+    "greet",
+    "wave_to_other_pet",
+    "sit_together",
+    "play_together",
+    "follow",
+    "celebrate_together",
+    "inspect_folder_together"
+  ],
+  "desktop_behavior": {
+    "initial_animation": "idle",
+    "drag_animation": "idle",
+    "double_click_animation": "happy",
+    "menu_states": [
+      {
+        "label": "Idle",
+        "animation": "idle"
+      },
+      {
+        "label": "Blink",
+        "animation": "blink"
+      },
+      {
+        "label": "Wave",
+        "animation": "wave"
+      },
+      {
+        "label": "Happy",
+        "animation": "happy"
+      },
+      {
+        "label": "Walk",
+        "animation": "walk"
+      },
+      {
+        "label": "Run",
+        "animation": "run"
+      },
+      {
+        "label": "Jump",
+        "animation": "jump"
+      },
+      {
+        "label": "Rest",
+        "animation": "rest"
+      },
+      {
+        "label": "Wink",
+        "animation": "wink"
+      },
+      {
+        "label": "Shy",
+        "animation": "shy"
+      },
+      {
+        "label": "Gaming",
+        "animation": "gaming"
+      },
+      {
+        "label": "Chat",
+        "animation": "chat"
+      },
+      {
+        "label": "Phone",
+        "animation": "phone"
+      },
+      {
+        "label": "Celebrate",
+        "animation": "celebrate"
+      }
+    ],
+    "choices": [
+      {
+        "animation": "idle",
+        "weight": 22
+      },
+      {
+        "animation": "blink",
+        "weight": 7
+      },
+      {
+        "animation": "wave",
+        "weight": 5
+      },
+      {
+        "animation": "happy",
+        "weight": 5
+      },
+      {
+        "animation": "walk",
+        "weight": 8
+      },
+      {
+        "animation": "run",
+        "weight": 10
+      },
+      {
+        "animation": "jump",
+        "weight": 7
+      },
+      {
+        "animation": "rest",
+        "weight": 5
+      },
+      {
+        "animation": "wink",
+        "weight": 4
+      },
+      {
+        "animation": "shy",
+        "weight": 4
+      },
+      {
+        "animation": "gaming",
+        "weight": 4
+      },
+      {
+        "animation": "chat",
+        "weight": 4
+      },
+      {
+        "animation": "phone",
+        "weight": 4
+      },
+      {
+        "animation": "celebrate",
+        "weight": 3
+      }
+    ]
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 300,
+      "source_frame_keys": [
+        "idle_01",
+        "idle_04",
+        "idle_05",
+        "idle_06"
+      ],
+      "notes": "Neutral idle and look-around loop."
+    },
+    "blink": {
+      "row": 1,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 260,
+      "source_frame_keys": [
+        "idle_01",
+        "idle_02",
+        "idle_03",
+        "idle_01"
+      ],
+      "notes": "Closed-eye blink loop."
+    },
+    "wave": {
+      "row": 2,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 230,
+      "source_frame_keys": [
+        "social_01",
+        "social_01",
+        "social_01"
+      ],
+      "notes": "Single clean wave pose held as a pet loop."
+    },
+    "happy": {
+      "row": 3,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 230,
+      "source_frame_keys": [
+        "emotions_01",
+        "emotions_02",
+        "emotions_03",
+        "emotions_01"
+      ],
+      "notes": "Happy / laugh / excited reaction loop."
+    },
+    "walk": {
+      "row": 4,
+      "frames": 7,
+      "loop": true,
+      "frame_duration_ms": 220,
+      "source_frame_keys": [
+        "walk_01",
+        "walk_02",
+        "walk_03",
+        "walk_04",
+        "walk_05",
+        "walk_06",
+        "walk_07"
+      ],
+      "notes": "Short soft walk cycle."
+    },
+    "run": {
+      "row": 5,
+      "frames": 8,
+      "loop": true,
+      "frame_duration_ms": 180,
+      "source_frame_keys": [
+        "run_01",
+        "run_02",
+        "run_03",
+        "run_04",
+        "run_05",
+        "run_06",
+        "run_07",
+        "run_08"
+      ],
+      "notes": "Full directional run cycle."
+    },
+    "jump": {
+      "row": 6,
+      "frames": 7,
+      "loop": false,
+      "frame_duration_ms": 220,
+      "source_frame_keys": [
+        "jump_01",
+        "jump_02",
+        "jump_03",
+        "jump_04",
+        "jump_05",
+        "jump_06",
+        "jump_07"
+      ],
+      "notes": "Jump, airtime, and landing sequence."
+    },
+    "rest": {
+      "row": 7,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 320,
+      "source_frame_keys": [
+        "rest_01",
+        "rest_02",
+        "rest_06",
+        "rest_07"
+      ],
+      "notes": "Sit and calm desk-rest loop."
+    },
+    "wink": {
+      "row": 8,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 260,
+      "source_frame_keys": [
+        "social_02",
+        "social_02",
+        "social_02"
+      ],
+      "notes": "Held wink pose."
+    },
+    "shy": {
+      "row": 9,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 280,
+      "source_frame_keys": [
+        "social_06",
+        "social_06",
+        "social_06"
+      ],
+      "notes": "Held shy pose."
+    },
+    "gaming": {
+      "row": 10,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 300,
+      "source_frame_keys": [
+        "gaming_01",
+        "gaming_02",
+        "gaming_03",
+        "gaming_04"
+      ],
+      "notes": "Cute gaming/controller poses; seated lower body intentionally compact."
+    },
+    "chat": {
+      "row": 11,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 280,
+      "source_frame_keys": [
+        "chat_01",
+        "chat_03",
+        "chat_04",
+        "chat_06"
+      ],
+      "notes": "Chat / Discord / voice-chat variations; body remains readable at pet scale."
+    },
+    "phone": {
+      "row": 12,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 280,
+      "source_frame_keys": [
+        "chat_05",
+        "chat_06",
+        "chat_05"
+      ],
+      "notes": "Phone check and texting hold loop."
+    },
+    "celebrate": {
+      "row": 13,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 220,
+      "source_frame_keys": [
+        "extra_05",
+        "extra_06",
+        "extra_06"
+      ],
+      "notes": "Short cheer / hype celebration sequence."
+    }
+  }
+}

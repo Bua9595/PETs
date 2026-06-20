@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pet-hatch"
+version = "0.1.0"
+description = "Erweiterbares Hatch-Pet Projekt mit Ruffy-Look und Codex Skill Integration."
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["pet", "hatch", "codex", "skill", "ruffy"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+pet-hatch = "main:main"
+desktop-pet = "desktop_pet:main"
+
+[project.optional-dependencies]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["pet", "skills", "skill_loader", "asset_loader", "sprite_animator", "desktop_pet", "codex_pet_builder", "sprite_rebuilder", "sprite_qa", "main"]

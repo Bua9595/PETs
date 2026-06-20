@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruffy Pet Preview</title>
+  <style>
+    :root {
+      --bg: #111318;
+      --panel: #1d2028;
+      --text: #f6f1df;
+      --muted: #aeb4c0;
+      --accent: #ff3da7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 50% 20%, #2d2735, var(--bg) 62%);
+      color: var(--text);
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+    }
+
+    main {
+      width: min(720px, calc(100vw - 32px));
+      display: grid;
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .stage {
+      width: min(520px, 100%);
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      border: 1px solid #333846;
+      background:
+        linear-gradient(135deg, rgba(255, 61, 167, 0.18), rgba(255, 197, 74, 0.08)),
+        #171a21;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    #sprite {
+      width: 384px;
+      height: 416px;
+      image-rendering: auto;
+      background-image: url("assets/pets/ruffy/spritesheet.png");
+      background-repeat: no-repeat;
+      background-size: 4608px 8320px;
+      transform: translateY(8px);
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    button {
+      min-width: 84px;
+      border: 1px solid #3b4150;
+      border-radius: 6px;
+      padding: 10px 12px;
+      background: var(--panel);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: #352034;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="stage">
+      <div id="sprite" aria-label="Animierter Pet-Sprite"></div>
+    </div>
+    <div class="controls" id="controls"></div>
+    <div class="meta" id="meta"></div>
+  </main>
+
+  <script>
+    const cell = { width: 192, height: 208, scale: 2 };
+    const animations = {
+      idle: { row: 0, frames: 8, loop: true, frameMs: 260 },
+      blink: { row: 1, frames: 4, loop: true, frameMs: 300 },
+      wave: { row: 2, frames: 6, loop: true, frameMs: 260 },
+      happy: { row: 3, frames: 6, loop: true, frameMs: 280 },
+      run: { row: 4, frames: 8, loop: true, frameMs: 170 },
+      walk: { row: 5, frames: 6, loop: true, frameMs: 230 },
+      jump: { row: 6, frames: 6, loop: false, frameMs: 220 },
+      sit: { row: 7, frames: 4, loop: true, frameMs: 320 },
+      rest: { row: 8, frames: 4, loop: true, frameMs: 360 },
+      nap: { row: 9, frames: 3, loop: true, frameMs: 420 },
+      failed: { row: 10, frames: 4, loop: true, frameMs: 320 },
+      curious: { row: 11, frames: 4, loop: true, frameMs: 300 },
+      celebrate: { row: 12, frames: 6, loop: true, frameMs: 240 },
+      rubber_stretch: { row: 13, frames: 6, loop: false, frameMs: 210 },
+      rubber_punch: { row: 14, frames: 6, loop: false, frameMs: 190 },
+      rubber_reach: { row: 15, frames: 5, loop: false, frameMs: 210 },
+      gear2: { row: 16, frames: 6, loop: true, frameMs: 170 },
+      gear3: { row: 17, frames: 4, loop: false, frameMs: 210 },
+      gear4: { row: 18, frames: 6, loop: true, frameMs: 190 },
+      gear5: { row: 19, frames: 8, loop: true, frameMs: 180 }
+    };
+
+    const sprite = document.querySelector("#sprite");
+    const controls = document.querySelector("#controls");
+    const meta = document.querySelector("#meta");
+    let active = "idle";
+    let frame = 0;
+    let timer = 0;
+
+    function draw() {
+      const spec = animations[active];
+      const x = -(frame * cell.width * cell.scale);
+      const y = -(spec.row * cell.height * cell.scale);
+      sprite.style.backgroundPosition = `${x}px ${y}px`;
+      meta.textContent = `${active} · Frame ${frame + 1}/${spec.frames}`;
+    }
+
+    function play(name) {
+      active = name;
+      frame = 0;
+      document.querySelectorAll("button").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.animation === name));
+      });
+      window.clearInterval(timer);
+      draw();
+      timer = window.setInterval(() => {
+        const spec = animations[active];
+        frame += 1;
+        if (frame >= spec.frames) {
+          frame = spec.loop ? 0 : spec.frames - 1;
+        }
+        draw();
+      }, animations[active].frameMs || 250);
+    }
+
+    Object.keys(animations).forEach((name) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.dataset.animation = name;
+      button.textContent = name;
+      button.addEventListener("click", () => play(name));
+      controls.append(button);
+    });
+
+    play("idle");
+  </script>
+</body>
+</html>

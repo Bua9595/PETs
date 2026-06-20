@@ -1,0 +1,1901 @@
+{
+  "0": {
+    "state": "idle",
+    "white_halo_pixels_before": 1554,
+    "white_halo_pixels_after": 1158,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "1": {
+    "state": "idle",
+    "white_halo_pixels_before": 1511,
+    "white_halo_pixels_after": 1156,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "2": {
+    "state": "idle",
+    "white_halo_pixels_before": 1606,
+    "white_halo_pixels_after": 1192,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "3": {
+    "state": "idle",
+    "white_halo_pixels_before": 1525,
+    "white_halo_pixels_after": 1116,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "4": {
+    "state": "idle",
+    "white_halo_pixels_before": 1541,
+    "white_halo_pixels_after": 1183,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "5": {
+    "state": "idle",
+    "white_halo_pixels_before": 1655,
+    "white_halo_pixels_after": 1288,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "6": {
+    "state": "idle",
+    "white_halo_pixels_before": 1559,
+    "white_halo_pixels_after": 1156,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "7": {
+    "state": "wave",
+    "white_halo_pixels_before": 1605,
+    "white_halo_pixels_after": 1228,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "8": {
+    "state": "wave",
+    "white_halo_pixels_before": 1604,
+    "white_halo_pixels_after": 1214,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "9": {
+    "state": "wave",
+    "white_halo_pixels_before": 1554,
+    "white_halo_pixels_after": 1147,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "10": {
+    "state": "wave",
+    "white_halo_pixels_before": 1513,
+    "white_halo_pixels_after": 1198,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "11": {
+    "state": "wave",
+    "white_halo_pixels_before": 1467,
+    "white_halo_pixels_after": 1117,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "12": {
+    "state": "wave",
+    "white_halo_pixels_before": 1490,
+    "white_halo_pixels_after": 1148,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "13": {
+    "state": "happy",
+    "white_halo_pixels_before": 1563,
+    "white_halo_pixels_after": 1248,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "14": {
+    "state": "happy",
+    "white_halo_pixels_before": 1676,
+    "white_halo_pixels_after": 1242,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "15": {
+    "state": "happy",
+    "white_halo_pixels_before": 1495,
+    "white_halo_pixels_after": 1159,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "16": {
+    "state": "happy",
+    "white_halo_pixels_before": 2078,
+    "white_halo_pixels_after": 1782,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "17": {
+    "state": "happy",
+    "white_halo_pixels_before": 1462,
+    "white_halo_pixels_after": 1102,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "18": {
+    "state": "happy",
+    "white_halo_pixels_before": 1408,
+    "white_halo_pixels_after": 1087,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "19": {
+    "state": "rest",
+    "white_halo_pixels_before": 2125,
+    "white_halo_pixels_after": 1658,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "20": {
+    "state": "rest",
+    "white_halo_pixels_before": 2092,
+    "white_halo_pixels_after": 1667,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "21": {
+    "state": "rest",
+    "white_halo_pixels_before": 2829,
+    "white_halo_pixels_after": 2069,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "22": {
+    "state": "rest",
+    "white_halo_pixels_before": 3061,
+    "white_halo_pixels_after": 2133,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "23": {
+    "state": "rest",
+    "white_halo_pixels_before": 2344,
+    "white_halo_pixels_after": 1844,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "24": {
+    "state": "walk",
+    "white_halo_pixels_before": 1485,
+    "white_halo_pixels_after": 1165,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "25": {
+    "state": "walk",
+    "white_halo_pixels_before": 1894,
+    "white_halo_pixels_after": 1524,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "26": {
+    "state": "walk",
+    "white_halo_pixels_before": 1546,
+    "white_halo_pixels_after": 1176,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "27": {
+    "state": "walk",
+    "white_halo_pixels_before": 1439,
+    "white_halo_pixels_after": 1164,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "28": {
+    "state": "walk",
+    "white_halo_pixels_before": 1668,
+    "white_halo_pixels_after": 1321,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "29": {
+    "state": "walk",
+    "white_halo_pixels_before": 1816,
+    "white_halo_pixels_after": 1335,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "30": {
+    "state": "walk",
+    "white_halo_pixels_before": 2097,
+    "white_halo_pixels_after": 1719,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "31": {
+    "state": "walk",
+    "white_halo_pixels_before": 1882,
+    "white_halo_pixels_after": 1484,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "32": {
+    "state": "walk",
+    "white_halo_pixels_before": 1825,
+    "white_halo_pixels_after": 1500,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "33": {
+    "state": "walk",
+    "white_halo_pixels_before": 1647,
+    "white_halo_pixels_after": 1370,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "34": {
+    "state": "walk",
+    "white_halo_pixels_before": 1885,
+    "white_halo_pixels_after": 1533,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "35": {
+    "state": "walk",
+    "white_halo_pixels_before": 1943,
+    "white_halo_pixels_after": 1586,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "36": {
+    "state": "run",
+    "white_halo_pixels_before": 1826,
+    "white_halo_pixels_after": 1348,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "37": {
+    "state": "run",
+    "white_halo_pixels_before": 1893,
+    "white_halo_pixels_after": 1513,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "38": {
+    "state": "run",
+    "white_halo_pixels_before": 1924,
+    "white_halo_pixels_after": 1509,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "39": {
+    "state": "run",
+    "white_halo_pixels_before": 2084,
+    "white_halo_pixels_after": 1670,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "40": {
+    "state": "run",
+    "white_halo_pixels_before": 1901,
+    "white_halo_pixels_after": 1476,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "41": {
+    "state": "run",
+    "white_halo_pixels_before": 1909,
+    "white_halo_pixels_after": 1470,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "42": {
+    "state": "run",
+    "white_halo_pixels_before": 1999,
+    "white_halo_pixels_after": 1502,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "43": {
+    "state": "run",
+    "white_halo_pixels_before": 2066,
+    "white_halo_pixels_after": 1581,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "44": {
+    "state": "run",
+    "white_halo_pixels_before": 2581,
+    "white_halo_pixels_after": 2006,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "45": {
+    "state": "run",
+    "white_halo_pixels_before": 2567,
+    "white_halo_pixels_after": 1978,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "46": {
+    "state": "run",
+    "white_halo_pixels_before": 1982,
+    "white_halo_pixels_after": 1543,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "47": {
+    "state": "run",
+    "white_halo_pixels_before": 2101,
+    "white_halo_pixels_after": 1701,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "48": {
+    "state": "jump",
+    "white_halo_pixels_before": 1769,
+    "white_halo_pixels_after": 1394,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "49": {
+    "state": "jump",
+    "white_halo_pixels_before": 2029,
+    "white_halo_pixels_after": 1637,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "50": {
+    "state": "jump",
+    "white_halo_pixels_before": 1907,
+    "white_halo_pixels_after": 1602,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "51": {
+    "state": "jump",
+    "white_halo_pixels_before": 1824,
+    "white_halo_pixels_after": 1419,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "52": {
+    "state": "jump",
+    "white_halo_pixels_before": 1779,
+    "white_halo_pixels_after": 1382,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "53": {
+    "state": "jump",
+    "white_halo_pixels_before": 2206,
+    "white_halo_pixels_after": 1797,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "54": {
+    "state": "jump",
+    "white_halo_pixels_before": 2036,
+    "white_halo_pixels_after": 1596,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "55": {
+    "state": "jump",
+    "white_halo_pixels_before": 1288,
+    "white_halo_pixels_after": 935,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "56": {
+    "state": "jump",
+    "white_halo_pixels_before": 1810,
+    "white_halo_pixels_after": 1471,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "57": {
+    "state": "jump",
+    "white_halo_pixels_before": 1208,
+    "white_halo_pixels_after": 902,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "58": {
+    "state": "jump",
+    "white_halo_pixels_before": 1340,
+    "white_halo_pixels_after": 1020,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "59": {
+    "state": "jump",
+    "white_halo_pixels_before": 1608,
+    "white_halo_pixels_after": 1191,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "60": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 2002,
+    "white_halo_pixels_after": 1681,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "61": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1571,
+    "white_halo_pixels_after": 1232,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "62": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1387,
+    "white_halo_pixels_after": 1036,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "63": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1480,
+    "white_halo_pixels_after": 1130,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "64": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1606,
+    "white_halo_pixels_after": 1236,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "65": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 2216,
+    "white_halo_pixels_after": 1746,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "66": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1798,
+    "white_halo_pixels_after": 1467,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "67": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1832,
+    "white_halo_pixels_after": 1535,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "68": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1328,
+    "white_halo_pixels_after": 1032,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "69": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1415,
+    "white_halo_pixels_after": 1118,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "70": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1772,
+    "white_halo_pixels_after": 1394,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "71": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1554,
+    "white_halo_pixels_after": 1212,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "72": {
+    "state": "rubber_stretch",
+    "white_halo_pixels_before": 1927,
+    "white_halo_pixels_after": 1536,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "73": {
+    "state": "rubber_stretch",
+    "white_halo_pixels_before": 1937,
+    "white_halo_pixels_after": 1555,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "74": {
+    "state": "rubber_stretch",
+    "white_halo_pixels_before": 1531,
+    "white_halo_pixels_after": 1078,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "75": {
+    "state": "rubber_stretch",
+    "white_halo_pixels_before": 2573,
+    "white_halo_pixels_after": 2255,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "76": {
+    "state": "rubber_stretch",
+    "white_halo_pixels_before": 1955,
+    "white_halo_pixels_after": 1583,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "77": {
+    "state": "rubber_stretch",
+    "white_halo_pixels_before": 2243,
+    "white_halo_pixels_after": 1879,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "78": {
+    "state": "rubber_punch",
+    "white_halo_pixels_before": 2365,
+    "white_halo_pixels_after": 1963,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "79": {
+    "state": "rubber_punch",
+    "white_halo_pixels_before": 1996,
+    "white_halo_pixels_after": 1599,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "80": {
+    "state": "rubber_punch",
+    "white_halo_pixels_before": 2099,
+    "white_halo_pixels_after": 1734,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "81": {
+    "state": "rubber_punch",
+    "white_halo_pixels_before": 1932,
+    "white_halo_pixels_after": 1538,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "82": {
+    "state": "rubber_punch",
+    "white_halo_pixels_before": 1645,
+    "white_halo_pixels_after": 1340,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "83": {
+    "state": "rubber_punch",
+    "white_halo_pixels_before": 2093,
+    "white_halo_pixels_after": 1704,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "84": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 2075,
+    "white_halo_pixels_after": 1705,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "85": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 2028,
+    "white_halo_pixels_after": 1655,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "86": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1402,
+    "white_halo_pixels_after": 1148,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "87": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1867,
+    "white_halo_pixels_after": 1506,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "88": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1627,
+    "white_halo_pixels_after": 1258,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "89": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1817,
+    "white_halo_pixels_after": 1432,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "90": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1925,
+    "white_halo_pixels_after": 1439,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "91": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1111,
+    "white_halo_pixels_after": 838,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "92": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 2607,
+    "white_halo_pixels_after": 2047,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "93": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1889,
+    "white_halo_pixels_after": 1379,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "94": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 1678,
+    "white_halo_pixels_after": 1134,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "95": {
+    "state": "celebrate",
+    "white_halo_pixels_before": 2436,
+    "white_halo_pixels_after": 1815,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "96": {
+    "state": "eat",
+    "white_halo_pixels_before": 1574,
+    "white_halo_pixels_after": 1190,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "97": {
+    "state": "eat",
+    "white_halo_pixels_before": 1515,
+    "white_halo_pixels_after": 1120,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "98": {
+    "state": "eat",
+    "white_halo_pixels_before": 1675,
+    "white_halo_pixels_after": 1309,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "99": {
+    "state": "eat",
+    "white_halo_pixels_before": 2287,
+    "white_halo_pixels_after": 1937,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "100": {
+    "state": "gear2",
+    "white_halo_pixels_before": 2283,
+    "white_halo_pixels_after": 1564,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "101": {
+    "state": "gear2",
+    "white_halo_pixels_before": 2621,
+    "white_halo_pixels_after": 1872,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "102": {
+    "state": "gear2",
+    "white_halo_pixels_before": 4686,
+    "white_halo_pixels_after": 3698,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "103": {
+    "state": "gear4",
+    "white_halo_pixels_before": 3550,
+    "white_halo_pixels_after": 2480,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "104": {
+    "state": "gear4",
+    "white_halo_pixels_before": 3386,
+    "white_halo_pixels_after": 2584,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "105": {
+    "state": "gear4",
+    "white_halo_pixels_before": 3174,
+    "white_halo_pixels_after": 2469,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "106": {
+    "state": "gear4",
+    "white_halo_pixels_before": 2935,
+    "white_halo_pixels_after": 2181,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "107": {
+    "state": "gear4",
+    "white_halo_pixels_before": 2585,
+    "white_halo_pixels_after": 1981,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "108": {
+    "state": "gear4",
+    "white_halo_pixels_before": 1984,
+    "white_halo_pixels_after": 1506,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "109": {
+    "state": "gear4",
+    "white_halo_pixels_before": 2065,
+    "white_halo_pixels_after": 1812,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "110": {
+    "state": "gear4",
+    "white_halo_pixels_before": 2178,
+    "white_halo_pixels_after": 1655,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "111": {
+    "state": "gear4",
+    "white_halo_pixels_before": 2304,
+    "white_halo_pixels_after": 1721,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "112": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1756,
+    "white_halo_pixels_after": 1365,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "113": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 1812,
+    "white_halo_pixels_after": 1337,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "114": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 3027,
+    "white_halo_pixels_after": 2566,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "115": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 3185,
+    "white_halo_pixels_after": 2733,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "116": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 3352,
+    "white_halo_pixels_after": 2611,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "117": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 3166,
+    "white_halo_pixels_after": 2360,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "118": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 5074,
+    "white_halo_pixels_after": 4754,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "119": {
+    "state": "ambiguous",
+    "white_halo_pixels_before": 4949,
+    "white_halo_pixels_after": 4597,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "120": {
+    "state": "gear5",
+    "white_halo_pixels_before": 3994,
+    "white_halo_pixels_after": 3691,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "121": {
+    "state": "gear5",
+    "white_halo_pixels_before": 4495,
+    "white_halo_pixels_after": 4158,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "122": {
+    "state": "gear5",
+    "white_halo_pixels_before": 4662,
+    "white_halo_pixels_after": 4347,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "123": {
+    "state": "gear5",
+    "white_halo_pixels_before": 4874,
+    "white_halo_pixels_after": 4592,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "124": {
+    "state": "gear5",
+    "white_halo_pixels_before": 4671,
+    "white_halo_pixels_after": 4372,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "125": {
+    "state": "gear5",
+    "white_halo_pixels_before": 4731,
+    "white_halo_pixels_after": 4510,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "126": {
+    "state": "gear5",
+    "white_halo_pixels_before": 4515,
+    "white_halo_pixels_after": 4211,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "127": {
+    "state": "gear5",
+    "white_halo_pixels_before": 4213,
+    "white_halo_pixels_after": 4038,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "128": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4212,
+    "white_halo_pixels_after": 4034,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "129": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 3534,
+    "white_halo_pixels_after": 3272,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "130": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4170,
+    "white_halo_pixels_after": 3964,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "131": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4240,
+    "white_halo_pixels_after": 4004,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "132": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4664,
+    "white_halo_pixels_after": 4401,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "133": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4644,
+    "white_halo_pixels_after": 4467,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "134": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 3716,
+    "white_halo_pixels_after": 3455,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "135": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4718,
+    "white_halo_pixels_after": 4400,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "136": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4505,
+    "white_halo_pixels_after": 4321,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "137": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4649,
+    "white_halo_pixels_after": 4423,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "138": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 3676,
+    "white_halo_pixels_after": 3476,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "139": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4424,
+    "white_halo_pixels_after": 4136,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "140": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 3814,
+    "white_halo_pixels_after": 3586,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "141": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 3697,
+    "white_halo_pixels_after": 3469,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "142": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 5370,
+    "white_halo_pixels_after": 5195,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "143": {
+    "state": "duplicate",
+    "white_halo_pixels_before": 4469,
+    "white_halo_pixels_after": 4210,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_01": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1430,
+    "white_halo_pixels_after": 1430,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_02": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1333,
+    "white_halo_pixels_after": 1333,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_03": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1085,
+    "white_halo_pixels_after": 1085,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_04": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1243,
+    "white_halo_pixels_after": 1243,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_05": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1263,
+    "white_halo_pixels_after": 1263,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_06": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1503,
+    "white_halo_pixels_after": 1503,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_07": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1307,
+    "white_halo_pixels_after": 1307,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_08": {
+    "state": "gear5",
+    "white_halo_pixels_before": 940,
+    "white_halo_pixels_after": 940,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_09": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1301,
+    "white_halo_pixels_after": 1301,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_10": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1119,
+    "white_halo_pixels_after": 1119,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_11": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1088,
+    "white_halo_pixels_after": 1088,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_12": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1276,
+    "white_halo_pixels_after": 1276,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_13": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1351,
+    "white_halo_pixels_after": 1351,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_14": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1224,
+    "white_halo_pixels_after": 1224,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_15": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1294,
+    "white_halo_pixels_after": 1294,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_16": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1360,
+    "white_halo_pixels_after": 1360,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_17": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1145,
+    "white_halo_pixels_after": 1145,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_18": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1753,
+    "white_halo_pixels_after": 1753,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_19": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1592,
+    "white_halo_pixels_after": 1592,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_20": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1496,
+    "white_halo_pixels_after": 1496,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_21": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1092,
+    "white_halo_pixels_after": 1092,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_22": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1190,
+    "white_halo_pixels_after": 1190,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_23": {
+    "state": "gear5",
+    "white_halo_pixels_before": 844,
+    "white_halo_pixels_after": 844,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_24": {
+    "state": "gear5",
+    "white_halo_pixels_before": 755,
+    "white_halo_pixels_after": 755,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_25": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1171,
+    "white_halo_pixels_after": 1171,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_26": {
+    "state": "gear5",
+    "white_halo_pixels_before": 486,
+    "white_halo_pixels_after": 486,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_27": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1254,
+    "white_halo_pixels_after": 1254,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_28": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1316,
+    "white_halo_pixels_after": 1316,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_29": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1075,
+    "white_halo_pixels_after": 1075,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_30": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1088,
+    "white_halo_pixels_after": 1088,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_31": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1205,
+    "white_halo_pixels_after": 1205,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "g5_32": {
+    "state": "gear5",
+    "white_halo_pixels_before": 1709,
+    "white_halo_pixels_after": 1709,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_01": {
+    "state": "gear3",
+    "white_halo_pixels_before": 892,
+    "white_halo_pixels_after": 892,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_02": {
+    "state": "gear3",
+    "white_halo_pixels_before": 603,
+    "white_halo_pixels_after": 603,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_03": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1016,
+    "white_halo_pixels_after": 1016,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_04": {
+    "state": "gear3",
+    "white_halo_pixels_before": 595,
+    "white_halo_pixels_after": 595,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_05": {
+    "state": "gear3",
+    "white_halo_pixels_before": 998,
+    "white_halo_pixels_after": 998,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_06": {
+    "state": "gear3",
+    "white_halo_pixels_before": 699,
+    "white_halo_pixels_after": 699,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_07": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1384,
+    "white_halo_pixels_after": 1384,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_08": {
+    "state": "gear3",
+    "white_halo_pixels_before": 930,
+    "white_halo_pixels_after": 930,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_09": {
+    "state": "gear3",
+    "white_halo_pixels_before": 270,
+    "white_halo_pixels_after": 270,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_10": {
+    "state": "gear3",
+    "white_halo_pixels_before": 872,
+    "white_halo_pixels_after": 872,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_11": {
+    "state": "gear3",
+    "white_halo_pixels_before": 578,
+    "white_halo_pixels_after": 578,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_12": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1259,
+    "white_halo_pixels_after": 1259,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_13": {
+    "state": "gear3",
+    "white_halo_pixels_before": 917,
+    "white_halo_pixels_after": 917,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_14": {
+    "state": "gear3",
+    "white_halo_pixels_before": 962,
+    "white_halo_pixels_after": 962,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_15": {
+    "state": "gear3",
+    "white_halo_pixels_before": 685,
+    "white_halo_pixels_after": 685,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_16": {
+    "state": "gear3",
+    "white_halo_pixels_before": 929,
+    "white_halo_pixels_after": 929,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_17": {
+    "state": "gear3",
+    "white_halo_pixels_before": 546,
+    "white_halo_pixels_after": 546,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_18": {
+    "state": "gear3",
+    "white_halo_pixels_before": 813,
+    "white_halo_pixels_after": 813,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_19": {
+    "state": "gear3",
+    "white_halo_pixels_before": 904,
+    "white_halo_pixels_after": 904,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_20": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1472,
+    "white_halo_pixels_after": 1472,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_21": {
+    "state": "gear3",
+    "white_halo_pixels_before": 930,
+    "white_halo_pixels_after": 930,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_22": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1034,
+    "white_halo_pixels_after": 1034,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_23": {
+    "state": "gear3",
+    "white_halo_pixels_before": 729,
+    "white_halo_pixels_after": 729,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_24": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1158,
+    "white_halo_pixels_after": 1158,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_25": {
+    "state": "gear3",
+    "white_halo_pixels_before": 943,
+    "white_halo_pixels_after": 943,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_26": {
+    "state": "gear3",
+    "white_halo_pixels_before": 924,
+    "white_halo_pixels_after": 924,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_27": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1177,
+    "white_halo_pixels_after": 1177,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_28": {
+    "state": "gear3",
+    "white_halo_pixels_before": 489,
+    "white_halo_pixels_after": 489,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_29": {
+    "state": "gear3",
+    "white_halo_pixels_before": 595,
+    "white_halo_pixels_after": 595,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_30": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1190,
+    "white_halo_pixels_after": 1190,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_31": {
+    "state": "gear3",
+    "white_halo_pixels_before": 698,
+    "white_halo_pixels_after": 698,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_32": {
+    "state": "gear3",
+    "white_halo_pixels_before": 583,
+    "white_halo_pixels_after": 583,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_33": {
+    "state": "gear3",
+    "white_halo_pixels_before": 576,
+    "white_halo_pixels_after": 576,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_34": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1248,
+    "white_halo_pixels_after": 1248,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  },
+  "p3_35": {
+    "state": "gear3",
+    "white_halo_pixels_before": 1133,
+    "white_halo_pixels_after": 1133,
+    "dark_bg_clean": false,
+    "magenta_bg_clean": false,
+    "accepted": false,
+    "notes": "Visible bright contour remains."
+  }
+}
