@@ -24,4 +24,4 @@ desktop-pet = "desktop_pet:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-py-modules = ["pet", "skills", "skill_loader", "asset_loader", "sprite_animator", "desktop_pet", "codex_pet_builder", "sprite_rebuilder", "sprite_qa", "main"]
+py-modules = ["pet", "skills", "skill_loader", "asset_loader", "sprite_animator", "desktop_pet", "codex_pet_builder", "pet1_ruffy_builder", "pet1_100sheet_builder", "pet2_chibi_builder", "sprite_rebuilder", "sprite_qa", "main"]

@@ -1,0 +1,2 @@
+Run with: python src/desktop_pet.py --pet ruffy --scale 0.5
+Controls: drag with left mouse, double-click rubber_punch, right-click menu, Esc closes.

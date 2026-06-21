@@ -2,362 +2,693 @@
   "id": "ruffy",
   "display_name": "Ruffy",
   "image": "spritesheet.png",
-  "source_image": "../../source/pet1_ruffy_100_source_sheet.png",
-  "supplemental_sources": [
-    "../../source/pet1_ruffy_gear5_32_source_sheet.png",
-    "../../source/pet1_ruffy_power_32_source_sheet.png"
-  ],
-  "columns": 12,
-  "rows": 21,
-  "cell_width": 192,
-  "cell_height": 208,
-  "frame_duration_ms": 240,
+  "source_images": {
+    "base": "../../source/pet1_ruffy_base_source.png",
+    "gear2": "../../source/pet1_ruffy_gear2_source.png",
+    "gear3": "../../source/pet1_ruffy_gear3_source.png",
+    "gear4": "../../source/pet1_ruffy_gear4_source.png",
+    "gear5": "../../source/pet1_ruffy_gear5_source.png"
+  },
+  "columns": 10,
+  "rows": 24,
+  "cell_width": 320,
+  "cell_height": 320,
+  "frame_duration_ms": 340,
   "animations": {
     "idle": {
       "row": 0,
-      "frames": 6,
+      "frames": 4,
       "loop": true,
-      "frame_duration_ms": 260,
-      "source_frame_ids": [
-        "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
+      "frame_duration_ms": 380,
+      "source_refs": [
+        "base_01",
+        "base_02",
+        "base_01",
+        "base_03"
       ],
-      "notes": "Calm idle loop from standing variants.",
+      "category": "core",
+      "notes": "Neutral/friendly idle.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
     },
     "blink": {
       "row": 1,
-      "frames": 4,
+      "frames": 3,
       "loop": true,
-      "frame_duration_ms": 320,
-      "source_frame_ids": [
-        "2",
-        "3",
-        "4",
-        "5"
+      "frame_duration_ms": 430,
+      "source_refs": [
+        "base_01",
+        "base_09",
+        "base_01"
       ],
-      "notes": "Closed-eye idle variants.",
+      "category": "core",
+      "notes": "Blink/rest settle.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
     },
     "wave": {
       "row": 2,
       "frames": 4,
       "loop": true,
-      "frame_duration_ms": 260,
-      "source_frame_ids": [
-        "7",
-        "8",
-        "9",
-        "10"
+      "frame_duration_ms": 360,
+      "source_refs": [
+        "base_01",
+        "base_04",
+        "base_21",
+        "base_04"
       ],
-      "notes": "Greeting poses only.",
+      "category": "social",
+      "notes": "Wave and greeting poses.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
     },
     "happy": {
       "row": 3,
       "frames": 4,
       "loop": true,
-      "frame_duration_ms": 280,
-      "source_frame_ids": [
-        "13",
-        "15",
-        "16",
-        "23"
-      ],
-      "notes": "Happy emote loop.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "walk": {
-      "row": 4,
-      "frames": 4,
-      "loop": true,
-      "frame_duration_ms": 230,
-      "source_frame_ids": [
-        "25",
-        "27",
-        "28",
-        "29"
-      ],
-      "notes": "Shorter, softer locomotion cycle.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "run": {
-      "row": 5,
-      "frames": 8,
-      "loop": true,
-      "frame_duration_ms": 170,
-      "source_frame_ids": [
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43"
-      ],
-      "notes": "Directional run cycle.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "jump": {
-      "row": 6,
-      "frames": 4,
-      "loop": false,
-      "frame_duration_ms": 220,
-      "source_frame_ids": [
-        "48",
-        "49",
-        "52",
-        "53"
-      ],
-      "notes": "Takeoff and air frames only.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "sit": {
-      "row": 7,
-      "frames": 2,
-      "loop": true,
       "frame_duration_ms": 340,
-      "source_frame_ids": [
-        "19",
-        "20"
+      "source_refs": [
+        "base_02",
+        "base_11",
+        "base_24",
+        "base_02"
       ],
-      "notes": "Stable seated poses.",
+      "category": "core",
+      "notes": "Happy Ruffy loop.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
     },
-    "rest": {
-      "row": 8,
-      "frames": 2,
+    "surprised": {
+      "row": 4,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 360,
+      "source_refs": [
+        "base_05",
+        "base_23",
+        "base_05"
+      ],
+      "category": "core",
+      "notes": "Surprised/confused reaction.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "thinking": {
+      "row": 5,
+      "frames": 3,
       "loop": true,
       "frame_duration_ms": 380,
-      "source_frame_ids": [
-        "20",
-        "21"
+      "source_refs": [
+        "base_06",
+        "base_08",
+        "base_06"
       ],
-      "notes": "Resting loop.",
+      "category": "core",
+      "notes": "Thinking / tactical look.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "nap": {
-      "row": 9,
-      "frames": 2,
-      "loop": true,
-      "frame_duration_ms": 430,
-      "source_frame_ids": [
-        "20",
-        "21"
-      ],
-      "notes": "Sleepy seated loop.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "failed": {
-      "row": 10,
-      "frames": 2,
-      "loop": true,
-      "frame_duration_ms": 320,
-      "source_frame_ids": [
-        "21",
-        "22"
-      ],
-      "notes": "Dizzy and failed emote frames.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
     },
     "curious": {
+      "row": 6,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 360,
+      "source_refs": [
+        "base_12",
+        "base_23",
+        "base_03"
+      ],
+      "category": "core",
+      "notes": "Curious pointing / shrug.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "walk": {
+      "row": 7,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 320,
+      "source_refs": [
+        "base_14",
+        "base_15",
+        "base_14",
+        "base_15"
+      ],
+      "category": "movement",
+      "notes": "Best available base movement cycle.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "run": {
+      "row": 8,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 280,
+      "source_refs": [
+        "base_14",
+        "base_15",
+        "base_14",
+        "base_15"
+      ],
+      "category": "movement",
+      "notes": "Normal run loop from clean base frames.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "jump": {
+      "row": 9,
+      "frames": 4,
+      "loop": false,
+      "frame_duration_ms": 340,
+      "source_refs": [
+        "base_13",
+        "base_15",
+        "base_18",
+        "base_19"
+      ],
+      "category": "movement",
+      "notes": "Jump start, air, kick, land.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "sit": {
+      "row": 10,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 460,
+      "source_refs": [
+        "base_09",
+        "base_20",
+        "base_22"
+      ],
+      "category": "rest",
+      "notes": "Seated loop.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "rest": {
       "row": 11,
       "frames": 3,
       "loop": true,
-      "frame_duration_ms": 300,
-      "source_frame_ids": [
-        "17",
-        "18",
-        "30"
+      "frame_duration_ms": 520,
+      "source_refs": [
+        "base_22",
+        "base_10",
+        "base_20"
       ],
-      "notes": "Curious/question poses.",
+      "category": "rest",
+      "notes": "Rest / sleepy loop.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
+    },
+    "failed": {
+      "row": 12,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 480,
+      "source_refs": [
+        "base_25",
+        "gear3_16",
+        "base_20"
+      ],
+      "category": "rest",
+      "notes": "Failed / tired gag.",
+      "semantic_correct": true,
+      "qa_accepted": true
     },
     "celebrate": {
-      "row": 12,
-      "frames": 4,
-      "loop": true,
-      "frame_duration_ms": 240,
-      "source_frame_ids": [
-        "14",
-        "15",
-        "16",
-        "23"
-      ],
-      "notes": "Excited emote loop.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "eat": {
       "row": 13,
       "frames": 4,
       "loop": true,
-      "frame_duration_ms": 260,
-      "source_frame_ids": [
-        "96",
-        "97",
-        "98",
-        "99"
+      "frame_duration_ms": 330,
+      "source_refs": [
+        "base_11",
+        "base_24",
+        "base_02",
+        "base_11"
       ],
-      "notes": "Food-only frames, explicitly not gear3.",
+      "category": "social",
+      "notes": "Cheer and victory poses.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
+    },
+    "drag_react": {
+      "row": 14,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 360,
+      "source_refs": [
+        "base_23",
+        "base_20",
+        "base_23"
+      ],
+      "category": "desktop",
+      "notes": "Dragged / dropped reaction.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "cursor_follow": {
+      "row": 15,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 360,
+      "source_refs": [
+        "base_12",
+        "base_03",
+        "base_12"
+      ],
+      "category": "desktop",
+      "notes": "Pointer-following pose.",
+      "semantic_correct": true,
+      "qa_accepted": true
     },
     "rubber_stretch": {
-      "row": 14,
-      "frames": 5,
-      "loop": false,
-      "frame_duration_ms": 210,
-      "source_frame_ids": [
-        "72",
-        "73",
-        "75",
-        "76",
-        "77"
-      ],
-      "notes": "Elastic stretch sequence.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "rubber_punch": {
-      "row": 15,
-      "frames": 4,
-      "loop": false,
-      "frame_duration_ms": 190,
-      "source_frame_ids": [
-        "78",
-        "79",
-        "80",
-        "81"
-      ],
-      "notes": "Punch extension sequence.",
-      "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
-    },
-    "rubber_reach": {
       "row": 16,
       "frames": 4,
       "loop": false,
-      "frame_duration_ms": 210,
-      "source_frame_ids": [
-        "72",
-        "73",
-        "74",
-        "75"
+      "frame_duration_ms": 300,
+      "source_refs": [
+        "gear3_02",
+        "gear3_03",
+        "gear3_17",
+        "gear3_10"
       ],
-      "notes": "Reach/grab frames.",
+      "category": "rubber",
+      "notes": "Elastic wind-up and stretch.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
+    },
+    "rubber_punch": {
+      "row": 17,
+      "frames": 4,
+      "loop": false,
+      "frame_duration_ms": 260,
+      "source_refs": [
+        "gear3_04",
+        "gear3_05",
+        "gear3_07",
+        "gear3_19"
+      ],
+      "category": "rubber",
+      "notes": "Giant/rubber punch with visible fist.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "rubber_reach": {
+      "row": 18,
+      "frames": 3,
+      "loop": false,
+      "frame_duration_ms": 280,
+      "source_refs": [
+        "gear3_06",
+        "gear3_09",
+        "gear3_10"
+      ],
+      "category": "rubber",
+      "notes": "Long-arm reach / grab.",
+      "semantic_correct": true,
+      "qa_accepted": true
+    },
+    "rubber_kick": {
+      "row": 19,
+      "frames": 3,
+      "loop": false,
+      "frame_duration_ms": 280,
+      "source_refs": [
+        "gear3_11",
+        "gear3_13",
+        "gear3_14"
+      ],
+      "category": "rubber",
+      "notes": "Giant-foot and kick frames.",
+      "semantic_correct": true,
+      "qa_accepted": true
     },
     "gear2": {
-      "row": 17,
-      "frames": 3,
+      "row": 20,
+      "frames": 6,
       "loop": true,
-      "frame_duration_ms": 170,
-      "source_frame_ids": [
-        "100",
-        "101",
-        "102"
+      "frame_duration_ms": 240,
+      "source_refs": [
+        "gear2_01",
+        "gear2_02",
+        "gear2_03",
+        "gear2_04",
+        "gear2_12",
+        "gear2_15"
       ],
-      "notes": "Steam / normal body only.",
+      "category": "gear",
+      "notes": "Gear 2: normal body, steam, speed stance.",
       "semantic_correct": true,
-      "halo_clean": false,
-      "motion_coherent": true
+      "qa_accepted": true
     },
     "gear3": {
-      "row": 18,
-      "frames": 8,
+      "row": 21,
+      "frames": 6,
       "loop": false,
-      "frame_duration_ms": 180,
-      "source_frame_ids": [
-        "p3_06",
-        "p3_07",
-        "p3_15",
-        "p3_10",
-        "p3_21",
-        "p3_23",
-        "p3_17",
-        "p3_24"
+      "frame_duration_ms": 260,
+      "source_refs": [
+        "gear3_04",
+        "gear3_05",
+        "gear3_08",
+        "gear3_12",
+        "gear3_13",
+        "gear3_20"
       ],
-      "notes": "Giant-fist / giant-limb sequence from power sheet.",
+      "category": "gear",
+      "notes": "Gear 3 giant-fist / giant-foot sequence.",
       "semantic_correct": true,
-      "halo_clean": true,
-      "motion_coherent": true
+      "qa_accepted": true
     },
     "gear4": {
-      "row": 19,
-      "frames": 9,
+      "row": 22,
+      "frames": 6,
       "loop": true,
-      "frame_duration_ms": 190,
-      "source_frame_ids": [
-        "103",
-        "104",
-        "105",
-        "106",
-        "107",
-        "108",
-        "109",
-        "110",
-        "111"
+      "frame_duration_ms": 260,
+      "source_refs": [
+        "gear4_01",
+        "gear4_02",
+        "gear4_03",
+        "gear4_12",
+        "gear4_18",
+        "gear4_13"
       ],
-      "notes": "Dark aura and inflated power-form only.",
+      "category": "gear",
+      "notes": "Gear 4 Haki power-form.",
       "semantic_correct": true,
-      "halo_clean": true,
-      "motion_coherent": true
+      "qa_accepted": true
     },
     "gear5": {
-      "row": 20,
-      "frames": 8,
+      "row": 23,
+      "frames": 9,
       "loop": true,
-      "frame_duration_ms": 180,
-      "source_frame_ids": [
-        "g5_01",
-        "g5_02",
-        "g5_03",
-        "g5_20",
-        "g5_21",
-        "g5_30",
-        "g5_31",
-        "g5_32"
+      "frame_duration_ms": 260,
+      "source_refs": [
+        "gear5_01",
+        "gear5_02",
+        "gear5_03",
+        "gear5_05",
+        "gear5_07",
+        "gear5_08",
+        "gear5_18",
+        "gear5_19",
+        "gear5_20"
       ],
-      "notes": "Dark-source Gear5 loop.",
+      "category": "gear",
+      "notes": "Gear 5 Joy Boy loop.",
       "semantic_correct": true,
-      "halo_clean": true,
-      "motion_coherent": true
+      "qa_accepted": true
     }
-  }
+  },
+  "desktop_behavior": {
+    "initial_animation": "idle",
+    "drag_animation": "drag_react",
+    "double_click_animation": "rubber_punch",
+    "animation_cooldown_seconds": 60,
+    "choices": [
+      {
+        "animation": "idle",
+        "weight": 16
+      },
+      {
+        "animation": "blink",
+        "weight": 7
+      },
+      {
+        "animation": "wave",
+        "weight": 8
+      },
+      {
+        "animation": "happy",
+        "weight": 8
+      },
+      {
+        "animation": "surprised",
+        "weight": 5
+      },
+      {
+        "animation": "thinking",
+        "weight": 5
+      },
+      {
+        "animation": "curious",
+        "weight": 5
+      },
+      {
+        "animation": "walk",
+        "weight": 8
+      },
+      {
+        "animation": "run",
+        "weight": 12
+      },
+      {
+        "animation": "jump",
+        "weight": 6
+      },
+      {
+        "animation": "sit",
+        "weight": 4
+      },
+      {
+        "animation": "rest",
+        "weight": 4
+      },
+      {
+        "animation": "failed",
+        "weight": 3
+      },
+      {
+        "animation": "celebrate",
+        "weight": 6
+      },
+      {
+        "animation": "drag_react",
+        "weight": 3
+      },
+      {
+        "animation": "cursor_follow",
+        "weight": 3
+      },
+      {
+        "animation": "rubber_stretch",
+        "weight": 4
+      },
+      {
+        "animation": "rubber_punch",
+        "weight": 5
+      },
+      {
+        "animation": "rubber_reach",
+        "weight": 3
+      },
+      {
+        "animation": "rubber_kick",
+        "weight": 3
+      },
+      {
+        "animation": "gear2",
+        "weight": 4
+      },
+      {
+        "animation": "gear3",
+        "weight": 3
+      },
+      {
+        "animation": "gear4",
+        "weight": 2
+      },
+      {
+        "animation": "gear5",
+        "weight": 2
+      }
+    ],
+    "category_behavior": {
+      "initial_category": "core",
+      "attempts_before_switch_min": 2,
+      "attempts_before_switch_max": 5,
+      "switch_probability": 0.45,
+      "categories": [
+        {
+          "id": "core",
+          "label": "Core",
+          "weight": 12,
+          "animations": [
+            "idle",
+            "blink",
+            "happy",
+            "surprised",
+            "thinking",
+            "curious"
+          ]
+        },
+        {
+          "id": "movement",
+          "label": "Movement",
+          "weight": 10,
+          "animations": [
+            "walk",
+            "run",
+            "jump"
+          ]
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "weight": 7,
+          "animations": [
+            "sit",
+            "rest",
+            "failed"
+          ]
+        },
+        {
+          "id": "social",
+          "label": "Social",
+          "weight": 6,
+          "animations": [
+            "wave",
+            "celebrate"
+          ]
+        },
+        {
+          "id": "desktop",
+          "label": "Desktop",
+          "weight": 5,
+          "animations": [
+            "drag_react",
+            "cursor_follow"
+          ]
+        },
+        {
+          "id": "rubber",
+          "label": "Rubber",
+          "weight": 4,
+          "animations": [
+            "rubber_stretch",
+            "rubber_punch",
+            "rubber_reach",
+            "rubber_kick"
+          ]
+        },
+        {
+          "id": "gear",
+          "label": "Gear",
+          "weight": 3,
+          "animations": [
+            "gear2",
+            "gear3",
+            "gear4",
+            "gear5"
+          ]
+        }
+      ]
+    },
+    "menu_states": [
+      {
+        "label": "Idle",
+        "animation": "idle"
+      },
+      {
+        "label": "Blink",
+        "animation": "blink"
+      },
+      {
+        "label": "Wave",
+        "animation": "wave"
+      },
+      {
+        "label": "Happy",
+        "animation": "happy"
+      },
+      {
+        "label": "Surprised",
+        "animation": "surprised"
+      },
+      {
+        "label": "Thinking",
+        "animation": "thinking"
+      },
+      {
+        "label": "Curious",
+        "animation": "curious"
+      },
+      {
+        "label": "Walk",
+        "animation": "walk"
+      },
+      {
+        "label": "Run",
+        "animation": "run"
+      },
+      {
+        "label": "Jump",
+        "animation": "jump"
+      },
+      {
+        "label": "Sit",
+        "animation": "sit"
+      },
+      {
+        "label": "Rest",
+        "animation": "rest"
+      },
+      {
+        "label": "Failed",
+        "animation": "failed"
+      },
+      {
+        "label": "Celebrate",
+        "animation": "celebrate"
+      },
+      {
+        "label": "Drag React",
+        "animation": "drag_react"
+      },
+      {
+        "label": "Cursor Follow",
+        "animation": "cursor_follow"
+      },
+      {
+        "label": "Rubber Stretch",
+        "animation": "rubber_stretch"
+      },
+      {
+        "label": "Rubber Punch",
+        "animation": "rubber_punch"
+      },
+      {
+        "label": "Rubber Reach",
+        "animation": "rubber_reach"
+      },
+      {
+        "label": "Rubber Kick",
+        "animation": "rubber_kick"
+      },
+      {
+        "label": "Gear2",
+        "animation": "gear2"
+      },
+      {
+        "label": "Gear3",
+        "animation": "gear3"
+      },
+      {
+        "label": "Gear4",
+        "animation": "gear4"
+      },
+      {
+        "label": "Gear5",
+        "animation": "gear5"
+      }
+    ]
+  },
+  "personality_tags": [
+    "energetic",
+    "playful",
+    "rubber",
+    "pirate",
+    "gear_forms"
+  ],
+  "build_notes": "Rebuilt only from the five 2026-06-21 magenta PET1 source sheets."
 }

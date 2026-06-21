@@ -1,6 +1,6 @@
 # Hatch Desktop Pet
 
-Lokales Desktop-Pet-Projekt mit waehlbaren Pets. Die echte Runtime ist
+Lokales Desktop-Pet-Projekt mit mehreren Pets. Die echte Runtime ist
 `src/desktop_pet.py`.
 
 ## Start
@@ -13,105 +13,71 @@ python src/desktop_pet.py --pet pet2_chibi --scale 0.5
 
 Steuerung:
 
-- Ziehen mit linker Maustaste
-- Doppelklick: pet-spezifische Reaktion aus dem Manifest
+- linke Maustaste ziehen: Pet verschieben
+- Doppelklick: pet-spezifische Hauptaktion
 - Rechtsklick: Animationsmenue
-- `Esc`: Schliessen
+- `Esc`: schliessen
 
-## Aktive Pet-Struktur
+## Source Of Truth
 
-Source of truth pro Pet:
+Runtime pro Pet:
 
 - `assets/pets/ruffy/manifest.json`
 - `assets/pets/ruffy/spritesheet.png`
 - `assets/pets/pet2_chibi/manifest.json`
 - `assets/pets/pet2_chibi/spritesheet.png`
 
-Kompatibilitaets-/Nebenexporte:
-
-- `assets/ruffy_sprite_manifest.json`
-- `assets/sprites/ruffy_spritesheet.png`
-- `assets/codex/ruffy/`
+Der Desktop-Pet laedt diese Manifeste. Alte Root-Dateien wie
+`assets/ruffy_sprite_manifest.json` oder `assets/sprites/ruffy_spritesheet.png`
+sind nicht mehr Teil der PET1-Pipeline.
 
 ## PET 1 / Ruffy
 
-Quellen:
+PET1 wurde am 2026-06-21 aus den neuen fuenf Magenta-Quellen neu gebaut:
 
-- `assets/source/pet1_ruffy_100_source_sheet.png`
-- `assets/source/pet1_ruffy_gear5_32_source_sheet.png`
-- `assets/source/pet1_ruffy_power_32_source_sheet.png`
+- `assets/source/pet1_ruffy_base_source.png`
+- `assets/source/pet1_ruffy_gear2_source.png`
+- `assets/source/pet1_ruffy_gear3_source.png`
+- `assets/source/pet1_ruffy_gear4_source.png`
+- `assets/source/pet1_ruffy_gear5_source.png`
 
-Status:
+Runtime-Artefakte:
 
-- Full-body erreicht
-- `gear2`, `gear3`, `gear4`, `gear5` getrennt
-- `gear3` kommt aus dem Power-Sheet
-- normales Hauptsheet ist weiter nicht crispy-clean
-
-Relevante QA:
-
+- `assets/pets/ruffy/spritesheet.png`
+- `assets/pets/ruffy/manifest.json`
 - `assets/pets/ruffy/contact_sheet.png`
-- `assets/pets/ruffy/qa/contact_sheet_dark.png`
-- `assets/pets/ruffy/qa/contact_sheet_magenta.png`
-- `assets/pets/ruffy/qa/halo_report.json`
-- `assets/pets/ruffy/review.gif`
+- `assets/pets/ruffy/qa/qa_table.md`
+- `assets/pets/ruffy/previews/*.gif`
+- `assets/codex/ruffy/` als Nebenexport aus demselben Runtime-Atlas
 
-## PET 2 / Chibi Girl
+Animationen:
 
-Charakter:
-
-- langes braunes Haar
-- grosse blaue Augen
-- violette Haaraccessoires
-- schwarz/pinkes Outfit
-- cute gamer / streamer / social vibe
-
-Referenz:
-
-- `assets/source/pet2_chibi_reference_sheet.png`
-
-Aktuelles Runtime-Mindestset:
-
-- `idle`
-- `blink`
-- `wave`
-- `happy`
-- `walk`
-- `run`
-- `jump`
-- `rest`
-- `wink`
-- `shy`
-- `gaming`
-- `chat`
-- `phone`
-- `celebrate`
-
-PET2-Artefakte:
-
-- `assets/pets/pet2_chibi/contact_sheet.png`
-- `assets/pets/pet2_chibi/qa/contact_sheet_dark.png`
-- `assets/pets/pet2_chibi/qa_report.json`
-- `assets/pets/pet2_chibi/review.gif`
-- `assets/pets/pet2_chibi/previews/*.gif`
-- `assets/pets/pet2_chibi/runtime_test.txt`
-
-## PET 2 Ausbauplan Richtung ~100 Frames
-
-- `core_idle_movement`: idle variations, blink variants, walk cycle, jump land, sit rest
-- `social_cute_reactions`: wave, wink, shy, heart, happy sparkle, laugh, surprise
-- `gamer_streamer`: gaming, laptop, phone, chat, celebrate, focus mode, headset adjust
-- `counter_strike_inspired`: queue wait, tactical think, clutch celebrate, peek pose, rank pride, desk competitive mode
-- `desktop_interaction`: drag react, cursor follow, sit on edge, hang, folder peek, window peek, object inspect
-- `multi_pet_interaction`: greet other pet, wave to other pet, play together, sit together, celebrate together, follow other pet
-
-## Builder / QA
+`idle`, `blink`, `wave`, `happy`, `surprised`, `thinking`, `curious`,
+`walk`, `run`, `jump`, `sit`, `rest`, `failed`, `celebrate`, `drag_react`,
+`cursor_follow`, `rubber_stretch`, `rubber_punch`, `rubber_reach`,
+`rubber_kick`, `gear2`, `gear3`, `gear4`, `gear5`.
 
 PET1 neu bauen:
 
 ```bash
+python src/pet1_ruffy_builder.py
+```
+
+Der alte Befehl bleibt als Wrapper erhalten:
+
+```bash
 python src/pet1_100sheet_builder.py
 ```
+
+## PET 2 / Chibi Girl
+
+PET2 nutzt eigene Quellen und ist von PET1 getrennt:
+
+- `assets/source/pet2_chibi_master_main.png`
+- `assets/source/pet2_chibi_master_support.png`
+- `assets/source/pet2_chibi_master_extra.png`
+- `assets/pets/pet2_chibi/manifest.json`
+- `assets/pets/pet2_chibi/spritesheet.png`
 
 PET2 neu bauen:
 
@@ -119,41 +85,42 @@ PET2 neu bauen:
 python src/pet2_chibi_builder.py
 ```
 
-Codex-Export fuer Ruffy neu bauen:
+## Verhalten
+
+Die Runtime nutzt `desktop_behavior` aus dem jeweiligen Manifest:
+
+- Kategorien mit Wechselwahrscheinlichkeit
+- mehrere Versuche pro Kategorie vor einem Wechsel
+- mindestens 60 Sekunden Cooldown pro Animation, bevor sie automatisch wieder
+  ausgewaehlt wird
+- Drag-, Doppelklick- und Rechtsklick-Aktionen pro Pet
+
+## QA
+
+PET1-QA:
+
+```bash
+python src/pet1_ruffy_builder.py
+type assets\pets\ruffy\qa\qa_table.md
+```
+
+Codex-Nebenexport validieren:
 
 ```bash
 python src/codex_pet_builder.py
-```
-
-Codex-Atlas validieren:
-
-```bash
 python "C:\Users\F. Bujupi\.codex\skills\hatch-real-pet\hatch-real-pet\scripts\validate_atlas.py" assets\codex\ruffy\spritesheet.png --json-out assets\codex\ruffy\validation.json
 ```
 
-## Multi-Pet-Vorbereitung
-
-Bereits im PET2-Manifest vorhanden:
-
-- `personality_tags`
-- `interaction_tags`
-- `compatible_group_actions`
-- `desktop_behavior`
-
-Geplant spaeter:
-
-- echte Pet-zu-Pet-Reaktionen in der Runtime
-- gemeinsame Group Actions
-- koordinierte Positionierung mehrerer Pets
+Der QA-Report prueft pro Animation `frames`, `min_margin_px`,
+`edge_touch_count`, `chroma_edge_pixels`, `visible_cluster_count` und
+`accepted`.
 
 ## Bekannte Grenzen
 
-- Die Codex-Umgebung kann das Tk-Fenster aktuell nicht sichtbar starten wegen:
-
-```text
-_tkinter.TclError: Can't find a usable init.tcl
-```
-
-- `--list-pets`, Manifest-Load und Atlas-Load sind pruefbar.
-- PET1 ist visuell noch nicht final wegen Halo am Hauptsheet.
-- PET2 ist als eigenes Pet integriert, aber die sichtbare GUI-Runtime konnte hier wegen Tcl/Tk nicht endgueltig bestaetigt werden.
+- PET1 `walk` und `run` haben nur zwei saubere eindeutige Base-Bewegungsposen;
+  sie sind stabil, aber noch kein wirklich fluessiger Laufzyklus.
+- Die neuen PET1-Quellen enthalten keine echten Gaming-/Laptop-/Phone-/Folder-
+  oder Multi-Pet-Desktop-Props; solche States werden nicht gefakt.
+- In dieser Umgebung kann das Tk-Fenster je nach Python/Tcl-Installation nicht
+  sichtbar starten. `--list-pets`, Manifest-Load, Build und Atlas-Validierung
+  sind pruefbar.

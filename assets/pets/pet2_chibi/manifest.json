@@ -2,12 +2,16 @@
   "id": "pet2_chibi",
   "display_name": "Pet 2 Chibi Girl",
   "image": "spritesheet.png",
-  "source_image": "../../source/pet2_chibi_reference_sheet.png",
-  "columns": 12,
-  "rows": 14,
-  "cell_width": 192,
-  "cell_height": 208,
-  "frame_duration_ms": 280,
+  "source_images": {
+    "main": "assets\\source\\pet2_chibi_master_main.png",
+    "support": "assets\\source\\pet2_chibi_master_support.png",
+    "extra": "assets\\source\\pet2_chibi_master_extra.png"
+  },
+  "columns": 8,
+  "rows": 35,
+  "cell_width": 256,
+  "cell_height": 256,
+  "frame_duration_ms": 360,
   "personality_tags": [
     "cute",
     "social",
@@ -36,8 +40,9 @@
   ],
   "desktop_behavior": {
     "initial_animation": "idle",
-    "drag_animation": "idle",
+    "drag_animation": "drag_react",
     "double_click_animation": "happy",
+    "animation_cooldown_seconds": 60,
     "menu_states": [
       {
         "label": "Idle",
@@ -52,8 +57,44 @@
         "animation": "wave"
       },
       {
+        "label": "Wink",
+        "animation": "wink"
+      },
+      {
         "label": "Happy",
         "animation": "happy"
+      },
+      {
+        "label": "Shy",
+        "animation": "shy"
+      },
+      {
+        "label": "Surprised",
+        "animation": "surprised"
+      },
+      {
+        "label": "Confused",
+        "animation": "confused"
+      },
+      {
+        "label": "Thinking",
+        "animation": "thinking"
+      },
+      {
+        "label": "Mischief",
+        "animation": "mischief"
+      },
+      {
+        "label": "Heart",
+        "animation": "heart"
+      },
+      {
+        "label": "Peace",
+        "animation": "peace"
+      },
+      {
+        "label": "Facepalm",
+        "animation": "facepalm"
       },
       {
         "label": "Walk",
@@ -68,24 +109,28 @@
         "animation": "jump"
       },
       {
-        "label": "Rest",
-        "animation": "rest"
+        "label": "Drag React",
+        "animation": "drag_react"
       },
       {
-        "label": "Wink",
-        "animation": "wink"
+        "label": "Cursor Follow",
+        "animation": "cursor_follow"
       },
       {
-        "label": "Shy",
-        "animation": "shy"
+        "label": "Drink",
+        "animation": "drink"
       },
       {
         "label": "Gaming",
         "animation": "gaming"
       },
       {
-        "label": "Chat",
-        "animation": "chat"
+        "label": "Gaming Focus",
+        "animation": "gaming_focus"
+      },
+      {
+        "label": "Laptop",
+        "animation": "laptop"
       },
       {
         "label": "Phone",
@@ -94,39 +139,63 @@
       {
         "label": "Celebrate",
         "animation": "celebrate"
+      },
+      {
+        "label": "Arms Up Cheer",
+        "animation": "cheer_arms_up"
+      },
+      {
+        "label": "Rest",
+        "animation": "rest"
+      },
+      {
+        "label": "Sleepy",
+        "animation": "sleepy"
+      },
+      {
+        "label": "Sit Edge",
+        "animation": "sit_edge"
+      },
+      {
+        "label": "Hang",
+        "animation": "hang_edge"
+      },
+      {
+        "label": "Peek",
+        "animation": "peek_side"
+      },
+      {
+        "label": "Folder Play",
+        "animation": "folder_play"
+      },
+      {
+        "label": "Pet Play",
+        "animation": "pet_play"
+      },
+      {
+        "label": "Greet Pet",
+        "animation": "greet_pet"
+      },
+      {
+        "label": "KO",
+        "animation": "ko"
+      },
+      {
+        "label": "KO Ghost",
+        "animation": "ko_ghost"
       }
     ],
     "choices": [
       {
         "animation": "idle",
-        "weight": 22
+        "weight": 18
       },
       {
         "animation": "blink",
-        "weight": 7
+        "weight": 6
       },
       {
         "animation": "wave",
-        "weight": 5
-      },
-      {
-        "animation": "happy",
-        "weight": 5
-      },
-      {
-        "animation": "walk",
-        "weight": 8
-      },
-      {
-        "animation": "run",
-        "weight": 10
-      },
-      {
-        "animation": "jump",
-        "weight": 7
-      },
-      {
-        "animation": "rest",
         "weight": 5
       },
       {
@@ -134,15 +203,63 @@
         "weight": 4
       },
       {
+        "animation": "happy",
+        "weight": 5
+      },
+      {
         "animation": "shy",
         "weight": 4
+      },
+      {
+        "animation": "surprised",
+        "weight": 3
+      },
+      {
+        "animation": "confused",
+        "weight": 3
+      },
+      {
+        "animation": "thinking",
+        "weight": 4
+      },
+      {
+        "animation": "mischief",
+        "weight": 3
+      },
+      {
+        "animation": "walk",
+        "weight": 8
+      },
+      {
+        "animation": "run",
+        "weight": 8
+      },
+      {
+        "animation": "jump",
+        "weight": 5
+      },
+      {
+        "animation": "drag_react",
+        "weight": 2
+      },
+      {
+        "animation": "cursor_follow",
+        "weight": 3
+      },
+      {
+        "animation": "drink",
+        "weight": 3
       },
       {
         "animation": "gaming",
         "weight": 4
       },
       {
-        "animation": "chat",
+        "animation": "gaming_focus",
+        "weight": 3
+      },
+      {
+        "animation": "laptop",
         "weight": 4
       },
       {
@@ -152,196 +269,584 @@
       {
         "animation": "celebrate",
         "weight": 3
+      },
+      {
+        "animation": "cheer_arms_up",
+        "weight": 2
+      },
+      {
+        "animation": "rest",
+        "weight": 4
+      },
+      {
+        "animation": "sleepy",
+        "weight": 4
+      },
+      {
+        "animation": "sit_edge",
+        "weight": 3
+      },
+      {
+        "animation": "hang_edge",
+        "weight": 2
+      },
+      {
+        "animation": "peek_side",
+        "weight": 3
+      },
+      {
+        "animation": "folder_play",
+        "weight": 2
+      },
+      {
+        "animation": "pet_play",
+        "weight": 2
+      },
+      {
+        "animation": "greet_pet",
+        "weight": 2
+      },
+      {
+        "animation": "heart",
+        "weight": 2
+      },
+      {
+        "animation": "peace",
+        "weight": 2
+      },
+      {
+        "animation": "facepalm",
+        "weight": 2
+      },
+      {
+        "animation": "ko",
+        "weight": 1
+      },
+      {
+        "animation": "ko_ghost",
+        "weight": 1
       }
-    ]
+    ],
+    "category_behavior": {
+      "initial_category": "core",
+      "switch_probability": 0.42,
+      "attempts_before_switch_min": 2,
+      "attempts_before_switch_max": 4,
+      "categories": [
+        {
+          "id": "core",
+          "label": "Core",
+          "weight": 24,
+          "animations": [
+            "idle",
+            "blink",
+            "wave",
+            "wink",
+            "happy",
+            "shy",
+            "surprised",
+            "confused",
+            "thinking",
+            "mischief",
+            "heart",
+            "peace",
+            "facepalm"
+          ]
+        },
+        {
+          "id": "movement",
+          "label": "Movement",
+          "weight": 18,
+          "animations": [
+            "walk",
+            "run",
+            "jump",
+            "drag_react",
+            "cursor_follow"
+          ]
+        },
+        {
+          "id": "gamer_social",
+          "label": "Gaming / Social",
+          "weight": 18,
+          "animations": [
+            "drink",
+            "gaming",
+            "gaming_focus",
+            "laptop",
+            "phone",
+            "celebrate",
+            "cheer_arms_up"
+          ]
+        },
+        {
+          "id": "rest",
+          "label": "Rest / Cozy",
+          "weight": 14,
+          "animations": [
+            "rest",
+            "sleepy"
+          ]
+        },
+        {
+          "id": "desktop",
+          "label": "Desktop / Pet",
+          "weight": 14,
+          "animations": [
+            "sit_edge",
+            "hang_edge",
+            "peek_side",
+            "folder_play"
+          ]
+        },
+        {
+          "id": "multi_pet",
+          "label": "Multi-Pet",
+          "weight": 8,
+          "animations": [
+            "pet_play",
+            "greet_pet"
+          ]
+        },
+        {
+          "id": "special",
+          "label": "Special",
+          "weight": 4,
+          "animations": [
+            "ko",
+            "ko_ghost"
+          ]
+        }
+      ]
+    }
   },
   "animations": {
     "idle": {
       "row": 0,
       "frames": 4,
       "loop": true,
-      "frame_duration_ms": 300,
+      "frame_duration_ms": 360,
       "source_frame_keys": [
-        "idle_01",
-        "idle_04",
-        "idle_05",
-        "idle_06"
+        "main_01",
+        "main_04",
+        "main_06",
+        "main_04"
       ],
-      "notes": "Neutral idle and look-around loop."
+      "notes": "Neutral/friendly idle loop."
     },
     "blink": {
       "row": 1,
       "frames": 4,
       "loop": true,
-      "frame_duration_ms": 260,
+      "frame_duration_ms": 340,
       "source_frame_keys": [
-        "idle_01",
-        "idle_02",
-        "idle_03",
-        "idle_01"
+        "main_01",
+        "main_01",
+        "main_05",
+        "main_01"
       ],
-      "notes": "Closed-eye blink loop."
+      "notes": "Blink and settle."
     },
     "wave": {
       "row": 2,
       "frames": 3,
       "loop": true,
-      "frame_duration_ms": 230,
+      "frame_duration_ms": 320,
       "source_frame_keys": [
-        "social_01",
-        "social_01",
-        "social_01"
+        "main_06",
+        "main_02",
+        "main_06"
       ],
-      "notes": "Single clean wave pose held as a pet loop."
+      "notes": "Friendly wave / open-hand greet."
     },
-    "happy": {
+    "wink": {
       "row": 3,
-      "frames": 4,
-      "loop": true,
-      "frame_duration_ms": 230,
-      "source_frame_keys": [
-        "emotions_01",
-        "emotions_02",
-        "emotions_03",
-        "emotions_01"
-      ],
-      "notes": "Happy / laugh / excited reaction loop."
-    },
-    "walk": {
-      "row": 4,
-      "frames": 7,
-      "loop": true,
-      "frame_duration_ms": 220,
-      "source_frame_keys": [
-        "walk_01",
-        "walk_02",
-        "walk_03",
-        "walk_04",
-        "walk_05",
-        "walk_06",
-        "walk_07"
-      ],
-      "notes": "Short soft walk cycle."
-    },
-    "run": {
-      "row": 5,
-      "frames": 8,
-      "loop": true,
-      "frame_duration_ms": 180,
-      "source_frame_keys": [
-        "run_01",
-        "run_02",
-        "run_03",
-        "run_04",
-        "run_05",
-        "run_06",
-        "run_07",
-        "run_08"
-      ],
-      "notes": "Full directional run cycle."
-    },
-    "jump": {
-      "row": 6,
-      "frames": 7,
-      "loop": false,
-      "frame_duration_ms": 220,
-      "source_frame_keys": [
-        "jump_01",
-        "jump_02",
-        "jump_03",
-        "jump_04",
-        "jump_05",
-        "jump_06",
-        "jump_07"
-      ],
-      "notes": "Jump, airtime, and landing sequence."
-    },
-    "rest": {
-      "row": 7,
-      "frames": 4,
+      "frames": 3,
       "loop": true,
       "frame_duration_ms": 320,
       "source_frame_keys": [
-        "rest_01",
-        "rest_02",
-        "rest_06",
-        "rest_07"
+        "main_08",
+        "support_16",
+        "main_08"
       ],
-      "notes": "Sit and calm desk-rest loop."
+      "notes": "Playful wink loop."
     },
-    "wink": {
-      "row": 8,
-      "frames": 3,
-      "loop": true,
-      "frame_duration_ms": 260,
-      "source_frame_keys": [
-        "social_02",
-        "social_02",
-        "social_02"
-      ],
-      "notes": "Held wink pose."
-    },
-    "shy": {
-      "row": 9,
-      "frames": 3,
-      "loop": true,
-      "frame_duration_ms": 280,
-      "source_frame_keys": [
-        "social_06",
-        "social_06",
-        "social_06"
-      ],
-      "notes": "Held shy pose."
-    },
-    "gaming": {
-      "row": 10,
+    "happy": {
+      "row": 4,
       "frames": 4,
       "loop": true,
       "frame_duration_ms": 300,
       "source_frame_keys": [
-        "gaming_01",
-        "gaming_02",
-        "gaming_03",
-        "gaming_04"
+        "extra_17",
+        "extra_38",
+        "main_16",
+        "extra_09"
       ],
-      "notes": "Cute gaming/controller poses; seated lower body intentionally compact."
+      "notes": "Big happy / streamer cheer."
     },
-    "chat": {
-      "row": 11,
-      "frames": 4,
+    "shy": {
+      "row": 5,
+      "frames": 3,
       "loop": true,
-      "frame_duration_ms": 280,
+      "frame_duration_ms": 340,
       "source_frame_keys": [
-        "chat_01",
-        "chat_03",
-        "chat_04",
-        "chat_06"
+        "extra_13",
+        "main_19",
+        "extra_13"
       ],
-      "notes": "Chat / Discord / voice-chat variations; body remains readable at pet scale."
+      "notes": "Shy held pose."
     },
-    "phone": {
+    "surprised": {
+      "row": 6,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 320,
+      "source_frame_keys": [
+        "extra_10",
+        "main_18",
+        "extra_10"
+      ],
+      "notes": "Surprised reaction."
+    },
+    "confused": {
+      "row": 7,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 340,
+      "source_frame_keys": [
+        "main_20",
+        "main_19",
+        "main_20"
+      ],
+      "notes": "Confused / unsure look."
+    },
+    "thinking": {
+      "row": 8,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 340,
+      "source_frame_keys": [
+        "extra_18",
+        "main_17",
+        "extra_18"
+      ],
+      "notes": "Thinking / tactical gamer look."
+    },
+    "mischief": {
+      "row": 9,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 420,
+      "source_frame_keys": [
+        "support_02",
+        "support_02",
+        "support_02"
+      ],
+      "notes": "Emoji-inspired fishbowl drink pose."
+    },
+    "heart": {
+      "row": 10,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 320,
+      "source_frame_keys": [
+        "extra_08",
+        "main_45",
+        "extra_08"
+      ],
+      "notes": "Heart / affectionate pose."
+    },
+    "peace": {
+      "row": 11,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 320,
+      "source_frame_keys": [
+        "extra_14",
+        "main_43",
+        "extra_14"
+      ],
+      "notes": "Peace sign pose."
+    },
+    "facepalm": {
       "row": 12,
       "frames": 3,
       "loop": true,
-      "frame_duration_ms": 280,
+      "frame_duration_ms": 340,
       "source_frame_keys": [
-        "chat_05",
-        "chat_06",
-        "chat_05"
+        "support_11",
+        "main_11",
+        "support_11"
       ],
-      "notes": "Phone check and texting hold loop."
+      "notes": "Facepalm loop."
     },
-    "celebrate": {
+    "walk": {
       "row": 13,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 300,
+      "source_frame_keys": [
+        "main_25",
+        "main_22",
+        "main_24",
+        "main_22"
+      ],
+      "notes": "Short walk cycle."
+    },
+    "run": {
+      "row": 14,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 240,
+      "source_frame_keys": [
+        "main_23",
+        "main_26",
+        "support_19",
+        "main_33"
+      ],
+      "notes": "Run cycle with stronger motion."
+    },
+    "jump": {
+      "row": 15,
+      "frames": 4,
+      "loop": false,
+      "frame_duration_ms": 300,
+      "source_frame_keys": [
+        "main_22",
+        "extra_15",
+        "main_27",
+        "extra_21"
+      ],
+      "notes": "Jump start, air, peak, land."
+    },
+    "drag_react": {
+      "row": 16,
       "frames": 3,
       "loop": true,
-      "frame_duration_ms": 220,
+      "frame_duration_ms": 340,
       "source_frame_keys": [
-        "extra_05",
-        "extra_06",
-        "extra_06"
+        "support_22",
+        "support_22",
+        "extra_21"
       ],
-      "notes": "Short cheer / hype celebration sequence."
+      "notes": "Dragged / dropped reaction."
+    },
+    "cursor_follow": {
+      "row": 17,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 320,
+      "source_frame_keys": [
+        "extra_32",
+        "main_29",
+        "extra_32"
+      ],
+      "notes": "Pointer-following pose."
+    },
+    "drink": {
+      "row": 18,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 420,
+      "source_frame_keys": [
+        "extra_39",
+        "extra_39",
+        "extra_39"
+      ],
+      "notes": "Emoji-inspired normal cup/glass drink pose."
+    },
+    "gaming": {
+      "row": 19,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 380,
+      "source_frame_keys": [
+        "main_12",
+        "extra_06",
+        "main_12"
+      ],
+      "notes": "Controller gaming pose."
+    },
+    "gaming_focus": {
+      "row": 20,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 380,
+      "source_frame_keys": [
+        "main_13",
+        "extra_40",
+        "extra_37"
+      ],
+      "notes": "Focused gamer vibe."
+    },
+    "laptop": {
+      "row": 21,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 380,
+      "source_frame_keys": [
+        "main_09",
+        "extra_05",
+        "main_10"
+      ],
+      "notes": "Laptop / stream-work loop."
+    },
+    "phone": {
+      "row": 22,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 360,
+      "source_frame_keys": [
+        "main_14",
+        "extra_27",
+        "extra_24"
+      ],
+      "notes": "Phone / texting poses."
+    },
+    "celebrate": {
+      "row": 23,
+      "frames": 4,
+      "loop": true,
+      "frame_duration_ms": 300,
+      "source_frame_keys": [
+        "extra_09",
+        "main_16",
+        "extra_38",
+        "extra_36"
+      ],
+      "notes": "Celebrate / victory loop."
+    },
+    "cheer_arms_up": {
+      "row": 24,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 420,
+      "source_frame_keys": [
+        "support_03",
+        "support_03",
+        "support_03"
+      ],
+      "notes": "Emoji-inspired mischievous grin pose."
+    },
+    "rest": {
+      "row": 25,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 420,
+      "source_frame_keys": [
+        "main_34",
+        "support_30",
+        "extra_26"
+      ],
+      "notes": "Cozy sit / blanket rest."
+    },
+    "sleepy": {
+      "row": 26,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 480,
+      "source_frame_keys": [
+        "main_21",
+        "main_28",
+        "extra_41"
+      ],
+      "notes": "Sleepy / nap sequence."
+    },
+    "sit_edge": {
+      "row": 27,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 380,
+      "source_frame_keys": [
+        "extra_20",
+        "main_38",
+        "support_25"
+      ],
+      "notes": "Sit on edge / ledge."
+    },
+    "hang_edge": {
+      "row": 28,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 340,
+      "source_frame_keys": [
+        "extra_28",
+        "main_24",
+        "main_23"
+      ],
+      "notes": "Hang from edge / peek over ledge."
+    },
+    "peek_side": {
+      "row": 29,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 340,
+      "source_frame_keys": [
+        "extra_23",
+        "main_39",
+        "extra_23"
+      ],
+      "notes": "Peek from side / doorway."
+    },
+    "folder_play": {
+      "row": 30,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 360,
+      "source_frame_keys": [
+        "extra_31",
+        "extra_31",
+        "extra_32"
+      ],
+      "notes": "Carry folder / inspect object."
+    },
+    "pet_play": {
+      "row": 31,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 380,
+      "source_frame_keys": [
+        "extra_34",
+        "main_41",
+        "extra_34"
+      ],
+      "notes": "Play with pet / object."
+    },
+    "greet_pet": {
+      "row": 32,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 360,
+      "source_frame_keys": [
+        "extra_35",
+        "main_42",
+        "extra_35"
+      ],
+      "notes": "Greeting / celebrating with other pet."
+    },
+    "ko": {
+      "row": 33,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 500,
+      "source_frame_keys": [
+        "extra_43",
+        "main_35",
+        "main_06"
+      ],
+      "notes": "KO / game-over gag."
+    },
+    "ko_ghost": {
+      "row": 34,
+      "frames": 3,
+      "loop": true,
+      "frame_duration_ms": 500,
+      "source_frame_keys": [
+        "support_06",
+        "support_06",
+        "support_06"
+      ],
+      "notes": "Exact KO emoji pose with ghost cue."
     }
   }
 }

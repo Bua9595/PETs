@@ -1,384 +1,2384 @@
 {
-  "source_sheet_path": "assets\\source\\pet1_ruffy_100_source_sheet.png",
-  "supplemental_sources": [
-    "assets\\source\\pet1_ruffy_gear5_32_source_sheet.png",
-    "assets\\source\\pet1_ruffy_power_32_source_sheet.png"
-  ],
-  "detected_grid": {
-    "columns": 12,
-    "rows": 12
+  "accepted": true,
+  "cell": {
+    "width": 320,
+    "height": 320,
+    "target_padding": 30,
+    "min_padding": 18
   },
-  "total_cells": 144,
-  "accepted_frames": 80,
-  "rejected_frames": 123,
-  "needs_source_frames": 8,
+  "sources": {
+    "base": {
+      "path": "assets\\source\\pet1_ruffy_base_source.png",
+      "cols": 5,
+      "rows": 5
+    },
+    "gear2": {
+      "path": "assets\\source\\pet1_ruffy_gear2_source.png",
+      "cols": 5,
+      "rows": 5
+    },
+    "gear3": {
+      "path": "assets\\source\\pet1_ruffy_gear3_source.png",
+      "cols": 5,
+      "rows": 4
+    },
+    "gear4": {
+      "path": "assets\\source\\pet1_ruffy_gear4_source.png",
+      "cols": 5,
+      "rows": 4
+    },
+    "gear5": {
+      "path": "assets\\source\\pet1_ruffy_gear5_source.png",
+      "cols": 5,
+      "rows": 4
+    }
+  },
   "states": [
     {
-      "state": "idle",
+      "animation": "idle",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_01",
+        "base_02",
+        "base_01",
+        "base_03"
+      ]
+    },
+    {
+      "animation": "blink",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_01",
+        "base_09",
+        "base_01"
+      ]
+    },
+    {
+      "animation": "wave",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_01",
+        "base_04",
+        "base_21",
+        "base_04"
+      ]
+    },
+    {
+      "animation": "happy",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_02",
+        "base_11",
+        "base_24",
+        "base_02"
+      ]
+    },
+    {
+      "animation": "surprised",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_05",
+        "base_23",
+        "base_05"
+      ]
+    },
+    {
+      "animation": "thinking",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_06",
+        "base_08",
+        "base_06"
+      ]
+    },
+    {
+      "animation": "curious",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_12",
+        "base_23",
+        "base_03"
+      ]
+    },
+    {
+      "animation": "walk",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_14",
+        "base_15",
+        "base_14",
+        "base_15"
+      ]
+    },
+    {
+      "animation": "run",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_14",
+        "base_15",
+        "base_14",
+        "base_15"
+      ]
+    },
+    {
+      "animation": "jump",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_13",
+        "base_15",
+        "base_18",
+        "base_19"
+      ]
+    },
+    {
+      "animation": "sit",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_09",
+        "base_20",
+        "base_22"
+      ]
+    },
+    {
+      "animation": "rest",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_22",
+        "base_10",
+        "base_20"
+      ]
+    },
+    {
+      "animation": "failed",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_25",
+        "gear3_16",
+        "base_20"
+      ]
+    },
+    {
+      "animation": "celebrate",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_11",
+        "base_24",
+        "base_02",
+        "base_11"
+      ]
+    },
+    {
+      "animation": "drag_react",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_23",
+        "base_20",
+        "base_23"
+      ]
+    },
+    {
+      "animation": "cursor_follow",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "base_12",
+        "base_03",
+        "base_12"
+      ]
+    },
+    {
+      "animation": "rubber_stretch",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 2,
+      "accepted": true,
+      "source_refs": [
+        "gear3_02",
+        "gear3_03",
+        "gear3_17",
+        "gear3_10"
+      ]
+    },
+    {
+      "animation": "rubber_punch",
+      "frames": 4,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 3,
+      "accepted": true,
+      "source_refs": [
+        "gear3_04",
+        "gear3_05",
+        "gear3_07",
+        "gear3_19"
+      ]
+    },
+    {
+      "animation": "rubber_reach",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 2,
+      "accepted": true,
+      "source_refs": [
+        "gear3_06",
+        "gear3_09",
+        "gear3_10"
+      ]
+    },
+    {
+      "animation": "rubber_kick",
+      "frames": 3,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
+      "accepted": true,
+      "source_refs": [
+        "gear3_11",
+        "gear3_13",
+        "gear3_14"
+      ]
+    },
+    {
+      "animation": "gear2",
       "frames": 6,
-      "frame_ids": [
-        "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "timing_ms": 260,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Calm idle loop from standing variants."
-    },
-    {
-      "state": "blink",
-      "frames": 4,
-      "frame_ids": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "timing_ms": 320,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Closed-eye idle variants."
-    },
-    {
-      "state": "wave",
-      "frames": 4,
-      "frame_ids": [
-        "7",
-        "8",
-        "9",
-        "10"
-      ],
-      "timing_ms": 260,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Greeting poses only."
-    },
-    {
-      "state": "happy",
-      "frames": 4,
-      "frame_ids": [
-        "13",
-        "15",
-        "16",
-        "23"
-      ],
-      "timing_ms": 280,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Happy emote loop."
-    },
-    {
-      "state": "walk",
-      "frames": 4,
-      "frame_ids": [
-        "25",
-        "27",
-        "28",
-        "29"
-      ],
-      "timing_ms": 230,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Shorter, softer locomotion cycle."
-    },
-    {
-      "state": "run",
-      "frames": 8,
-      "frame_ids": [
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43"
-      ],
-      "timing_ms": 170,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Directional run cycle."
-    },
-    {
-      "state": "jump",
-      "frames": 4,
-      "frame_ids": [
-        "48",
-        "49",
-        "52",
-        "53"
-      ],
-      "timing_ms": 220,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Takeoff and air frames only."
-    },
-    {
-      "state": "sit",
-      "frames": 2,
-      "frame_ids": [
-        "19",
-        "20"
-      ],
-      "timing_ms": 340,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Stable seated poses."
-    },
-    {
-      "state": "rest",
-      "frames": 2,
-      "frame_ids": [
-        "20",
-        "21"
-      ],
-      "timing_ms": 380,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Resting loop."
-    },
-    {
-      "state": "nap",
-      "frames": 2,
-      "frame_ids": [
-        "20",
-        "21"
-      ],
-      "timing_ms": 430,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Sleepy seated loop."
-    },
-    {
-      "state": "failed",
-      "frames": 2,
-      "frame_ids": [
-        "21",
-        "22"
-      ],
-      "timing_ms": 320,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Dizzy and failed emote frames."
-    },
-    {
-      "state": "curious",
-      "frames": 3,
-      "frame_ids": [
-        "17",
-        "18",
-        "30"
-      ],
-      "timing_ms": 300,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Curious/question poses."
-    },
-    {
-      "state": "celebrate",
-      "frames": 4,
-      "frame_ids": [
-        "14",
-        "15",
-        "16",
-        "23"
-      ],
-      "timing_ms": 240,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Excited emote loop."
-    },
-    {
-      "state": "eat",
-      "frames": 4,
-      "frame_ids": [
-        "96",
-        "97",
-        "98",
-        "99"
-      ],
-      "timing_ms": 260,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Food-only frames, explicitly not gear3."
-    },
-    {
-      "state": "rubber_stretch",
-      "frames": 5,
-      "frame_ids": [
-        "72",
-        "73",
-        "75",
-        "76",
-        "77"
-      ],
-      "timing_ms": 210,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Elastic stretch sequence."
-    },
-    {
-      "state": "rubber_punch",
-      "frames": 4,
-      "frame_ids": [
-        "78",
-        "79",
-        "80",
-        "81"
-      ],
-      "timing_ms": 190,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Punch extension sequence."
-    },
-    {
-      "state": "rubber_reach",
-      "frames": 4,
-      "frame_ids": [
-        "72",
-        "73",
-        "74",
-        "75"
-      ],
-      "timing_ms": 210,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Reach/grab frames."
-    },
-    {
-      "state": "gear2",
-      "frames": 3,
-      "frame_ids": [
-        "100",
-        "101",
-        "102"
-      ],
-      "timing_ms": 170,
-      "semantic_correct": true,
-      "halo_clean": false,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": false,
-      "notes": "Steam / normal body only."
-    },
-    {
-      "state": "gear3",
-      "frames": 8,
-      "frame_ids": [
-        "p3_06",
-        "p3_07",
-        "p3_15",
-        "p3_10",
-        "p3_21",
-        "p3_23",
-        "p3_17",
-        "p3_24"
-      ],
-      "timing_ms": 180,
-      "semantic_correct": true,
-      "halo_clean": true,
-      "full_body_visible": true,
-      "motion_coherent": true,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 1,
       "accepted": true,
-      "notes": "Giant-fist / giant-limb sequence from power sheet."
+      "source_refs": [
+        "gear2_01",
+        "gear2_02",
+        "gear2_03",
+        "gear2_04",
+        "gear2_12",
+        "gear2_15"
+      ]
     },
     {
-      "state": "gear4",
+      "animation": "gear3",
+      "frames": 6,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 4,
+      "accepted": true,
+      "source_refs": [
+        "gear3_04",
+        "gear3_05",
+        "gear3_08",
+        "gear3_12",
+        "gear3_13",
+        "gear3_20"
+      ]
+    },
+    {
+      "animation": "gear4",
+      "frames": 6,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 2,
+      "accepted": true,
+      "source_refs": [
+        "gear4_01",
+        "gear4_02",
+        "gear4_03",
+        "gear4_12",
+        "gear4_18",
+        "gear4_13"
+      ]
+    },
+    {
+      "animation": "gear5",
       "frames": 9,
-      "frame_ids": [
-        "103",
-        "104",
-        "105",
-        "106",
-        "107",
-        "108",
-        "109",
-        "110",
-        "111"
-      ],
-      "timing_ms": 190,
-      "semantic_correct": true,
-      "halo_clean": true,
-      "full_body_visible": true,
-      "motion_coherent": true,
+      "min_margin_px": 30,
+      "edge_touch_count": 0,
+      "chroma_edge_pixels": 0,
+      "visible_cluster_count": 3,
       "accepted": true,
-      "notes": "Dark aura and inflated power-form only."
-    },
-    {
-      "state": "gear5",
-      "frames": 8,
-      "frame_ids": [
-        "g5_01",
-        "g5_02",
-        "g5_03",
-        "g5_20",
-        "g5_21",
-        "g5_30",
-        "g5_31",
-        "g5_32"
-      ],
-      "timing_ms": 180,
-      "semantic_correct": true,
-      "halo_clean": true,
-      "full_body_visible": true,
-      "motion_coherent": true,
-      "accepted": true,
-      "notes": "Dark-source Gear5 loop."
+      "source_refs": [
+        "gear5_01",
+        "gear5_02",
+        "gear5_03",
+        "gear5_05",
+        "gear5_07",
+        "gear5_08",
+        "gear5_18",
+        "gear5_19",
+        "gear5_20"
+      ]
     }
+  ],
+  "source_frames": {
+    "base_01": {
+      "source": "base",
+      "index": 1,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_01.png",
+      "metrics": {
+        "bbox": [
+          80,
+          30,
+          239,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_02": {
+      "source": "base",
+      "index": 2,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_02.png",
+      "metrics": {
+        "bbox": [
+          82,
+          30,
+          238,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_03": {
+      "source": "base",
+      "index": 3,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_03.png",
+      "metrics": {
+        "bbox": [
+          79,
+          30,
+          240,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_04": {
+      "source": "base",
+      "index": 4,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_04.png",
+      "metrics": {
+        "bbox": [
+          69,
+          30,
+          251,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_05": {
+      "source": "base",
+      "index": 5,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_05.png",
+      "metrics": {
+        "bbox": [
+          80,
+          30,
+          239,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_06": {
+      "source": "base",
+      "index": 6,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_06.png",
+      "metrics": {
+        "bbox": [
+          84,
+          30,
+          236,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_07": {
+      "source": "base",
+      "index": 7,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_07.png",
+      "metrics": {
+        "bbox": [
+          84,
+          30,
+          236,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_08": {
+      "source": "base",
+      "index": 8,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_08.png",
+      "metrics": {
+        "bbox": [
+          85,
+          30,
+          235,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_09": {
+      "source": "base",
+      "index": 9,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_09.png",
+      "metrics": {
+        "bbox": [
+          73,
+          30,
+          246,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_10": {
+      "source": "base",
+      "index": 10,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_10.png",
+      "metrics": {
+        "bbox": [
+          63,
+          30,
+          257,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_11": {
+      "source": "base",
+      "index": 11,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_11.png",
+      "metrics": {
+        "bbox": [
+          71,
+          30,
+          249,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_12": {
+      "source": "base",
+      "index": 12,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_12.png",
+      "metrics": {
+        "bbox": [
+          62,
+          30,
+          257,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_13": {
+      "source": "base",
+      "index": 13,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_13.png",
+      "metrics": {
+        "bbox": [
+          58,
+          30,
+          262,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_14": {
+      "source": "base",
+      "index": 14,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_14.png",
+      "metrics": {
+        "bbox": [
+          65,
+          30,
+          255,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_15": {
+      "source": "base",
+      "index": 15,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_15.png",
+      "metrics": {
+        "bbox": [
+          64,
+          30,
+          255,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_16": {
+      "source": "base",
+      "index": 16,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_16.png",
+      "metrics": {
+        "bbox": [
+          59,
+          30,
+          261,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_17": {
+      "source": "base",
+      "index": 17,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_17.png",
+      "metrics": {
+        "bbox": [
+          66,
+          30,
+          254,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_18": {
+      "source": "base",
+      "index": 18,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_18.png",
+      "metrics": {
+        "bbox": [
+          56,
+          30,
+          263,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_19": {
+      "source": "base",
+      "index": 19,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_19.png",
+      "metrics": {
+        "bbox": [
+          30,
+          61,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_20": {
+      "source": "base",
+      "index": 20,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_20.png",
+      "metrics": {
+        "bbox": [
+          30,
+          41,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_21": {
+      "source": "base",
+      "index": 21,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_21.png",
+      "metrics": {
+        "bbox": [
+          47,
+          30,
+          272,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_22": {
+      "source": "base",
+      "index": 22,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_22.png",
+      "metrics": {
+        "bbox": [
+          68,
+          30,
+          252,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_23": {
+      "source": "base",
+      "index": 23,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_23.png",
+      "metrics": {
+        "bbox": [
+          39,
+          30,
+          281,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_24": {
+      "source": "base",
+      "index": 24,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_24.png",
+      "metrics": {
+        "bbox": [
+          45,
+          30,
+          274,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "base_25": {
+      "source": "base",
+      "index": 25,
+      "path": "assets\\pets\\ruffy\\source_cells\\base_25.png",
+      "metrics": {
+        "bbox": [
+          52,
+          30,
+          267,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_01": {
+      "source": "gear2",
+      "index": 1,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_01.png",
+      "metrics": {
+        "bbox": [
+          49,
+          30,
+          271,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_02": {
+      "source": "gear2",
+      "index": 2,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_02.png",
+      "metrics": {
+        "bbox": [
+          37,
+          30,
+          282,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_03": {
+      "source": "gear2",
+      "index": 3,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_03.png",
+      "metrics": {
+        "bbox": [
+          48,
+          30,
+          271,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_04": {
+      "source": "gear2",
+      "index": 4,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_04.png",
+      "metrics": {
+        "bbox": [
+          30,
+          80,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_05": {
+      "source": "gear2",
+      "index": 5,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_05.png",
+      "metrics": {
+        "bbox": [
+          30,
+          71,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear2_06": {
+      "source": "gear2",
+      "index": 6,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_06.png",
+      "metrics": {
+        "bbox": [
+          30,
+          88,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear2_07": {
+      "source": "gear2",
+      "index": 7,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_07.png",
+      "metrics": {
+        "bbox": [
+          30,
+          79,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_08": {
+      "source": "gear2",
+      "index": 8,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_08.png",
+      "metrics": {
+        "bbox": [
+          30,
+          84,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear2_09": {
+      "source": "gear2",
+      "index": 9,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_09.png",
+      "metrics": {
+        "bbox": [
+          63,
+          30,
+          257,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear2_10": {
+      "source": "gear2",
+      "index": 10,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_10.png",
+      "metrics": {
+        "bbox": [
+          30,
+          58,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_11": {
+      "source": "gear2",
+      "index": 11,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_11.png",
+      "metrics": {
+        "bbox": [
+          30,
+          92,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_12": {
+      "source": "gear2",
+      "index": 12,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_12.png",
+      "metrics": {
+        "bbox": [
+          41,
+          30,
+          279,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_13": {
+      "source": "gear2",
+      "index": 13,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_13.png",
+      "metrics": {
+        "bbox": [
+          30,
+          47,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_14": {
+      "source": "gear2",
+      "index": 14,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_14.png",
+      "metrics": {
+        "bbox": [
+          30,
+          49,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_15": {
+      "source": "gear2",
+      "index": 15,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_15.png",
+      "metrics": {
+        "bbox": [
+          30,
+          58,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_16": {
+      "source": "gear2",
+      "index": 16,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_16.png",
+      "metrics": {
+        "bbox": [
+          30,
+          86,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 3,
+        "accepted": true
+      }
+    },
+    "gear2_17": {
+      "source": "gear2",
+      "index": 17,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_17.png",
+      "metrics": {
+        "bbox": [
+          30,
+          58,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 5,
+        "accepted": true
+      }
+    },
+    "gear2_18": {
+      "source": "gear2",
+      "index": 18,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_18.png",
+      "metrics": {
+        "bbox": [
+          56,
+          30,
+          263,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_19": {
+      "source": "gear2",
+      "index": 19,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_19.png",
+      "metrics": {
+        "bbox": [
+          41,
+          30,
+          278,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_20": {
+      "source": "gear2",
+      "index": 20,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_20.png",
+      "metrics": {
+        "bbox": [
+          48,
+          30,
+          272,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_21": {
+      "source": "gear2",
+      "index": 21,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_21.png",
+      "metrics": {
+        "bbox": [
+          30,
+          33,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_22": {
+      "source": "gear2",
+      "index": 22,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_22.png",
+      "metrics": {
+        "bbox": [
+          30,
+          70,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear2_23": {
+      "source": "gear2",
+      "index": 23,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_23.png",
+      "metrics": {
+        "bbox": [
+          60,
+          30,
+          259,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear2_24": {
+      "source": "gear2",
+      "index": 24,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_24.png",
+      "metrics": {
+        "bbox": [
+          40,
+          30,
+          279,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 3,
+        "accepted": true
+      }
+    },
+    "gear2_25": {
+      "source": "gear2",
+      "index": 25,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear2_25.png",
+      "metrics": {
+        "bbox": [
+          35,
+          30,
+          284,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear3_01": {
+      "source": "gear3",
+      "index": 1,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_01.png",
+      "metrics": {
+        "bbox": [
+          78,
+          30,
+          241,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_02": {
+      "source": "gear3",
+      "index": 2,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_02.png",
+      "metrics": {
+        "bbox": [
+          80,
+          30,
+          240,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_03": {
+      "source": "gear3",
+      "index": 3,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_03.png",
+      "metrics": {
+        "bbox": [
+          62,
+          30,
+          258,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear3_04": {
+      "source": "gear3",
+      "index": 4,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_04.png",
+      "metrics": {
+        "bbox": [
+          57,
+          30,
+          263,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 3,
+        "accepted": true
+      }
+    },
+    "gear3_05": {
+      "source": "gear3",
+      "index": 5,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_05.png",
+      "metrics": {
+        "bbox": [
+          30,
+          54,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear3_06": {
+      "source": "gear3",
+      "index": 6,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_06.png",
+      "metrics": {
+        "bbox": [
+          44,
+          30,
+          276,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_07": {
+      "source": "gear3",
+      "index": 7,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_07.png",
+      "metrics": {
+        "bbox": [
+          30,
+          66,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear3_08": {
+      "source": "gear3",
+      "index": 8,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_08.png",
+      "metrics": {
+        "bbox": [
+          59,
+          30,
+          261,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 4,
+        "accepted": true
+      }
+    },
+    "gear3_09": {
+      "source": "gear3",
+      "index": 9,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_09.png",
+      "metrics": {
+        "bbox": [
+          30,
+          31,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear3_10": {
+      "source": "gear3",
+      "index": 10,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_10.png",
+      "metrics": {
+        "bbox": [
+          50,
+          30,
+          269,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_11": {
+      "source": "gear3",
+      "index": 11,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_11.png",
+      "metrics": {
+        "bbox": [
+          36,
+          30,
+          284,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_12": {
+      "source": "gear3",
+      "index": 12,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_12.png",
+      "metrics": {
+        "bbox": [
+          30,
+          30,
+          289,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 4,
+        "accepted": true
+      }
+    },
+    "gear3_13": {
+      "source": "gear3",
+      "index": 13,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_13.png",
+      "metrics": {
+        "bbox": [
+          30,
+          82,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_14": {
+      "source": "gear3",
+      "index": 14,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_14.png",
+      "metrics": {
+        "bbox": [
+          35,
+          30,
+          285,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_15": {
+      "source": "gear3",
+      "index": 15,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_15.png",
+      "metrics": {
+        "bbox": [
+          50,
+          30,
+          269,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_16": {
+      "source": "gear3",
+      "index": 16,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_16.png",
+      "metrics": {
+        "bbox": [
+          30,
+          42,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_17": {
+      "source": "gear3",
+      "index": 17,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_17.png",
+      "metrics": {
+        "bbox": [
+          47,
+          30,
+          273,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear3_18": {
+      "source": "gear3",
+      "index": 18,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_18.png",
+      "metrics": {
+        "bbox": [
+          40,
+          30,
+          280,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear3_19": {
+      "source": "gear3",
+      "index": 19,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_19.png",
+      "metrics": {
+        "bbox": [
+          30,
+          34,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear3_20": {
+      "source": "gear3",
+      "index": 20,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear3_20.png",
+      "metrics": {
+        "bbox": [
+          49,
+          30,
+          270,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 3,
+        "accepted": true
+      }
+    },
+    "gear4_01": {
+      "source": "gear4",
+      "index": 1,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_01.png",
+      "metrics": {
+        "bbox": [
+          30,
+          44,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_02": {
+      "source": "gear4",
+      "index": 2,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_02.png",
+      "metrics": {
+        "bbox": [
+          30,
+          68,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_03": {
+      "source": "gear4",
+      "index": 3,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_03.png",
+      "metrics": {
+        "bbox": [
+          30,
+          52,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_04": {
+      "source": "gear4",
+      "index": 4,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_04.png",
+      "metrics": {
+        "bbox": [
+          30,
+          53,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear4_05": {
+      "source": "gear4",
+      "index": 5,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_05.png",
+      "metrics": {
+        "bbox": [
+          42,
+          30,
+          277,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_06": {
+      "source": "gear4",
+      "index": 6,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_06.png",
+      "metrics": {
+        "bbox": [
+          43,
+          30,
+          277,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_07": {
+      "source": "gear4",
+      "index": 7,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_07.png",
+      "metrics": {
+        "bbox": [
+          30,
+          75,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_08": {
+      "source": "gear4",
+      "index": 8,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_08.png",
+      "metrics": {
+        "bbox": [
+          30,
+          67,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_09": {
+      "source": "gear4",
+      "index": 9,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_09.png",
+      "metrics": {
+        "bbox": [
+          30,
+          87,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_10": {
+      "source": "gear4",
+      "index": 10,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_10.png",
+      "metrics": {
+        "bbox": [
+          30,
+          83,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_11": {
+      "source": "gear4",
+      "index": 11,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_11.png",
+      "metrics": {
+        "bbox": [
+          47,
+          30,
+          273,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_12": {
+      "source": "gear4",
+      "index": 12,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_12.png",
+      "metrics": {
+        "bbox": [
+          30,
+          89,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear4_13": {
+      "source": "gear4",
+      "index": 13,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_13.png",
+      "metrics": {
+        "bbox": [
+          30,
+          55,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_14": {
+      "source": "gear4",
+      "index": 14,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_14.png",
+      "metrics": {
+        "bbox": [
+          30,
+          43,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_15": {
+      "source": "gear4",
+      "index": 15,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_15.png",
+      "metrics": {
+        "bbox": [
+          30,
+          84,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear4_16": {
+      "source": "gear4",
+      "index": 16,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_16.png",
+      "metrics": {
+        "bbox": [
+          30,
+          41,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_17": {
+      "source": "gear4",
+      "index": 17,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_17.png",
+      "metrics": {
+        "bbox": [
+          37,
+          30,
+          282,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear4_18": {
+      "source": "gear4",
+      "index": 18,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_18.png",
+      "metrics": {
+        "bbox": [
+          30,
+          41,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_19": {
+      "source": "gear4",
+      "index": 19,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_19.png",
+      "metrics": {
+        "bbox": [
+          30,
+          78,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear4_20": {
+      "source": "gear4",
+      "index": 20,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear4_20.png",
+      "metrics": {
+        "bbox": [
+          64,
+          30,
+          256,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_01": {
+      "source": "gear5",
+      "index": 1,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_01.png",
+      "metrics": {
+        "bbox": [
+          64,
+          30,
+          256,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_02": {
+      "source": "gear5",
+      "index": 2,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_02.png",
+      "metrics": {
+        "bbox": [
+          58,
+          30,
+          262,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_03": {
+      "source": "gear5",
+      "index": 3,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_03.png",
+      "metrics": {
+        "bbox": [
+          58,
+          30,
+          261,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_04": {
+      "source": "gear5",
+      "index": 4,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_04.png",
+      "metrics": {
+        "bbox": [
+          39,
+          30,
+          280,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_05": {
+      "source": "gear5",
+      "index": 5,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_05.png",
+      "metrics": {
+        "bbox": [
+          54,
+          30,
+          265,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_06": {
+      "source": "gear5",
+      "index": 6,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_06.png",
+      "metrics": {
+        "bbox": [
+          44,
+          30,
+          276,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_07": {
+      "source": "gear5",
+      "index": 7,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_07.png",
+      "metrics": {
+        "bbox": [
+          36,
+          30,
+          284,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_08": {
+      "source": "gear5",
+      "index": 8,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_08.png",
+      "metrics": {
+        "bbox": [
+          34,
+          30,
+          285,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear5_09": {
+      "source": "gear5",
+      "index": 9,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_09.png",
+      "metrics": {
+        "bbox": [
+          30,
+          50,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_10": {
+      "source": "gear5",
+      "index": 10,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_10.png",
+      "metrics": {
+        "bbox": [
+          50,
+          30,
+          270,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_11": {
+      "source": "gear5",
+      "index": 11,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_11.png",
+      "metrics": {
+        "bbox": [
+          30,
+          113,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 3,
+        "accepted": true
+      }
+    },
+    "gear5_12": {
+      "source": "gear5",
+      "index": 12,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_12.png",
+      "metrics": {
+        "bbox": [
+          39,
+          30,
+          281,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_13": {
+      "source": "gear5",
+      "index": 13,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_13.png",
+      "metrics": {
+        "bbox": [
+          41,
+          30,
+          279,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 3,
+        "accepted": true
+      }
+    },
+    "gear5_14": {
+      "source": "gear5",
+      "index": 14,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_14.png",
+      "metrics": {
+        "bbox": [
+          30,
+          37,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 1,
+        "visible_cluster_count": 1,
+        "accepted": false
+      }
+    },
+    "gear5_15": {
+      "source": "gear5",
+      "index": 15,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_15.png",
+      "metrics": {
+        "bbox": [
+          30,
+          40,
+          290,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_16": {
+      "source": "gear5",
+      "index": 16,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_16.png",
+      "metrics": {
+        "bbox": [
+          52,
+          30,
+          267,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 2,
+        "accepted": true
+      }
+    },
+    "gear5_17": {
+      "source": "gear5",
+      "index": 17,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_17.png",
+      "metrics": {
+        "bbox": [
+          33,
+          30,
+          287,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_18": {
+      "source": "gear5",
+      "index": 18,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_18.png",
+      "metrics": {
+        "bbox": [
+          41,
+          30,
+          278,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 3,
+        "accepted": true
+      }
+    },
+    "gear5_19": {
+      "source": "gear5",
+      "index": 19,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_19.png",
+      "metrics": {
+        "bbox": [
+          42,
+          30,
+          277,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    },
+    "gear5_20": {
+      "source": "gear5",
+      "index": 20,
+      "path": "assets\\pets\\ruffy\\source_cells\\gear5_20.png",
+      "metrics": {
+        "bbox": [
+          52,
+          30,
+          268,
+          290
+        ],
+        "min_margin_px": 30,
+        "edge_touch_count": 0,
+        "chroma_edge_pixels": 0,
+        "visible_cluster_count": 1,
+        "accepted": true
+      }
+    }
+  },
+  "known_source_limits": [
+    "The supplied base sheet has only two clean normal locomotion poses, so walk/run are solid but not truly fluid yet.",
+    "The new supplied Ruffy sheets do not contain gaming, phone, laptop, folder, or multi-pet social props; those states are intentionally omitted instead of faked."
   ]
 }

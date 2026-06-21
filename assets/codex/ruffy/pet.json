@@ -1,6 +1,6 @@
 {
   "id": "ruffy",
   "displayName": "Ruffy",
-  "description": "A small rubber-pirate desktop pet rebuilt from the 100-sprite PET-1 source sheet.",
+  "description": "A local fan-inspired rubber-pirate desktop pet rebuilt from the current PET1 runtime atlas.",
   "spritesheetPath": "spritesheet.webp"
 }

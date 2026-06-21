@@ -1,0 +1,26 @@
+| animation | frames | min_margin_px | edge_touch_count | chroma_edge_pixels | visible_cluster_count | accepted |
+|---|---:|---:|---:|---:|---:|---|
+| idle | 4 | 30 | 0 | 0 | 1 | True |
+| blink | 3 | 30 | 0 | 0 | 1 | True |
+| wave | 4 | 30 | 0 | 0 | 1 | True |
+| happy | 4 | 30 | 0 | 0 | 1 | True |
+| surprised | 3 | 30 | 0 | 0 | 1 | True |
+| thinking | 3 | 30 | 0 | 0 | 1 | True |
+| curious | 3 | 30 | 0 | 0 | 1 | True |
+| walk | 4 | 30 | 0 | 0 | 1 | True |
+| run | 4 | 30 | 0 | 0 | 1 | True |
+| jump | 4 | 30 | 0 | 0 | 1 | True |
+| sit | 3 | 30 | 0 | 0 | 1 | True |
+| rest | 3 | 30 | 0 | 0 | 1 | True |
+| failed | 3 | 30 | 0 | 0 | 1 | True |
+| celebrate | 4 | 30 | 0 | 0 | 1 | True |
+| drag_react | 3 | 30 | 0 | 0 | 1 | True |
+| cursor_follow | 3 | 30 | 0 | 0 | 1 | True |
+| rubber_stretch | 4 | 30 | 0 | 0 | 2 | True |
+| rubber_punch | 4 | 30 | 0 | 0 | 3 | True |
+| rubber_reach | 3 | 30 | 0 | 0 | 2 | True |
+| rubber_kick | 3 | 30 | 0 | 0 | 1 | True |
+| gear2 | 6 | 30 | 0 | 0 | 1 | True |
+| gear3 | 6 | 30 | 0 | 0 | 4 | True |
+| gear4 | 6 | 30 | 0 | 0 | 2 | True |
+| gear5 | 9 | 30 | 0 | 0 | 3 | True |
