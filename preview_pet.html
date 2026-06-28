@@ -48,8 +48,8 @@
     }
 
     #sprite {
-      width: 384px;
-      height: 416px;
+      width: 460px;
+      height: 832px;
       image-rendering: auto;
       background-image: url("assets/pets/ruffy/spritesheet.png");
       background-repeat: no-repeat;
@@ -98,26 +98,26 @@
   <script>
     const cell = { width: 192, height: 208, scale: 2 };
     const animations = {
-      idle: { row: 0, frames: 8, loop: true, frameMs: 260 },
-      blink: { row: 1, frames: 4, loop: true, frameMs: 300 },
-      wave: { row: 2, frames: 6, loop: true, frameMs: 260 },
-      happy: { row: 3, frames: 6, loop: true, frameMs: 280 },
-      run: { row: 4, frames: 8, loop: true, frameMs: 170 },
-      walk: { row: 5, frames: 6, loop: true, frameMs: 230 },
-      jump: { row: 6, frames: 6, loop: false, frameMs: 220 },
-      sit: { row: 7, frames: 4, loop: true, frameMs: 320 },
-      rest: { row: 8, frames: 4, loop: true, frameMs: 360 },
-      nap: { row: 9, frames: 3, loop: true, frameMs: 420 },
-      failed: { row: 10, frames: 4, loop: true, frameMs: 320 },
-      curious: { row: 11, frames: 4, loop: true, frameMs: 300 },
-      celebrate: { row: 12, frames: 6, loop: true, frameMs: 240 },
-      rubber_stretch: { row: 13, frames: 6, loop: false, frameMs: 210 },
-      rubber_punch: { row: 14, frames: 6, loop: false, frameMs: 190 },
-      rubber_reach: { row: 15, frames: 5, loop: false, frameMs: 210 },
-      gear2: { row: 16, frames: 6, loop: true, frameMs: 170 },
-      gear3: { row: 17, frames: 4, loop: false, frameMs: 210 },
-      gear4: { row: 18, frames: 6, loop: true, frameMs: 190 },
-      gear5: { row: 19, frames: 8, loop: true, frameMs: 180 }
+      idle: { row: 0, frames: 8, loop: false, frameMs: 200 },
+      blink: { row: 1, frames: 4, loop: false, frameMs: 200 },
+      wave: { row: 2, frames: 6, loop: false, frameMs: 200 },
+      happy: { row: 3, frames: 6, loop: false, frameMs: 200 },
+      run: { row: 4, frames: 8, loop: true, frameMs: 200 },
+      walk: { row: 5, frames: 6, loop: true, frameMs: 200 },
+      jump: { row: 6, frames: 6, loop: false, frameMs: 200 },
+      sit: { row: 7, frames: 4, loop: false, frameMs: 200 },
+      rest: { row: 8, frames: 4, loop: true, frameMs: 200 },
+      nap: { row: 9, frames: 3, loop: true, frameMs: 200 },
+      failed: { row: 10, frames: 4, loop: false, frameMs: 200 },
+      curious: { row: 11, frames: 4, loop: false, frameMs: 200 },
+      celebrate: { row: 12, frames: 6, loop: false, frameMs: 200 },
+      rubber_stretch: { row: 13, frames: 6, loop: false, frameMs: 200 },
+      rubber_punch: { row: 14, frames: 6, loop: false, frameMs: 200 },
+      rubber_reach: { row: 15, frames: 5, loop: false, frameMs: 200 },
+      gear2: { row: 16, frames: 6, loop: false, frameMs: 200 },
+      gear3: { row: 17, frames: 4, loop: false, frameMs: 200 },
+      gear4: { row: 18, frames: 6, loop: false, frameMs: 200 },
+      gear5: { row: 19, frames: 8, loop: false, frameMs: 200 }
     };
 
     const sprite = document.querySelector("#sprite");

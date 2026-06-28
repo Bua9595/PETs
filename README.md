@@ -31,6 +31,25 @@ Der Desktop-Pet laedt diese Manifeste. Alte Root-Dateien wie
 `assets/ruffy_sprite_manifest.json` oder `assets/sprites/ruffy_spritesheet.png`
 sind nicht mehr Teil der PET1-Pipeline.
 
+## Agenten- und Asset-Pipeline
+
+Die verbindlichen Regeln für Cursor, Codex und Asset-Verarbeitung liegen in:
+
+* `docs/PET_AGENT_CONTRACT.md`
+* `docs/PET_ASSET_PIPELINE.md`
+* `docs/PET_STATE_INDEX.md`
+
+Nur Sprites unter `assets/source_approved/` gelten als finale Quelle für Runtime-Assets.
+Rohbilder und fehlerhafte Sheets dürfen nicht direkt in den Runtime-Atlas übernommen werden.
+
+Das aktuelle Rohquellen-Inventar liegt in `docs/PET_SOURCE_INVENTORY.md`.
+
+Der Review-Prozess für Sprite-Kandidaten ist in `docs/PET_REVIEW_WORKFLOW.md` dokumentiert.
+
+Aktuelle Review-Dateien werden je Schritt unter `assets/review/reports/` erzeugt. Für Ruffy normal liegt die aktuelle Re-Extraction-Liste unter `assets/review/reports/ruffy_normal_reextract_review.csv`.
+
+Alte fehlerhafte Bildquellen wurden gesichert unter `backups/deprecated_sprite_sources_20260627.zip` und aus der aktiven Pipeline entfernt.
+
 ## PET 1 / Ruffy
 
 PET1 wurde am 2026-06-21 aus den neuen fuenf Magenta-Quellen neu gebaut:
