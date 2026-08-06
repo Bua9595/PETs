@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://desktop_pet_shell.gd" id="1_shell"]
+
+[node name="DesktopPetShell" type="Node2D"]
+script = ExtResource("1_shell")
+
+[node name="PetSilhouette" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(180, 32, 220, 45, 244, 78, 245, 112, 228, 142, 241, 160, 273, 210, 255, 224, 218, 184, 220, 285, 244, 344, 226, 370, 191, 316, 169, 316, 134, 370, 116, 344, 140, 285, 142, 184, 105, 224, 87, 210, 119, 160, 132, 142, 115, 112, 116, 78, 140, 45)
+color = Color(0.78, 0.9, 1, 1)
+antialiased = true
+
+[node name="Head" type="Polygon2D" parent="PetSilhouette"]
+polygon = PackedVector2Array(-24, -30, 24, -30, 36, -12, 30, 18, 14, 32, -14, 32, -30, 18, -36, -12)
+position = Vector2(180, 95)
+color = Color(0.95, 0.98, 1, 1)
+antialiased = true
+
+[node name="Body" type="Polygon2D" parent="PetSilhouette"]
+polygon = PackedVector2Array(-34, -52, 34, -52, 44, 30, 25, 72, -25, 72, -44, 30)
+position = Vector2(180, 225)
+color = Color(0.35, 0.5, 0.95, 1)
+antialiased = true
+
+[node name="LeftFoot" type="Polygon2D" parent="PetSilhouette"]
+polygon = PackedVector2Array(-18, -4, 18, -4, 26, 12, -26, 12)
+position = Vector2(140, 350)
+color = Color(0.16, 0.2, 0.42, 1)
+antialiased = true
+
+[node name="RightFoot" type="Polygon2D" parent="PetSilhouette"]
+polygon = PackedVector2Array(-18, -4, 18, -4, 26, 12, -26, 12)
+position = Vector2(220, 350)
+color = Color(0.16, 0.2, 0.42, 1)
+antialiased = true
+
+[node name="ChestBadge" type="Polygon2D" parent="PetSilhouette"]
+polygon = PackedVector2Array(-18, -10, 0, -28, 18, -10, 0, 12)
+position = Vector2(180, 240)
+color = Color(1, 0.78, 0.2, 1)
+antialiased = true
