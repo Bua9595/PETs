@@ -4,12 +4,15 @@ import argparse
 import os
 import random
 import tkinter as tk
-import time
 from pathlib import Path
 from tkinter import Menu
 
 from PIL import Image, ImageOps, ImageTk
 
+from behavior_controller import BehaviorController
+from chase_target_adapter import calculate_chase_window_position as calculate_chase_window_position_from_snapshot
+from manifest import load_manifest
+from sensor_snapshot import SensorSnapshot
 from sprite_animator import SpriteAnimator
 
 
@@ -54,11 +57,7 @@ class DesktopPet:
         self.drag_animation = str(self.desktop_behavior.get("drag_animation", "idle"))
         self.double_click_animation = str(self.desktop_behavior.get("double_click_animation", "rubber_punch"))
         self.current_animation = self.initial_animation
-        self.current_category: str | None = None
-        self.category_attempts = 0
-        self.category_switch_goal = self._random_category_switch_goal()
-        self.animation_cooldown_seconds = float(self.desktop_behavior.get("animation_cooldown_seconds", 60))
-        self.animation_cooldowns: dict[str, float] = {}
+        self.behavior_controller = BehaviorController(self.desktop_behavior, self.animator.available_animations)
         self.frame_index = 0
         self.frame_cache: dict[tuple[str, int], list[ImageTk.PhotoImage]] = {}
         self.next_decision_frames = 0
@@ -101,19 +100,19 @@ class DesktopPet:
                 label, animation = item
                 menu_states.append((str(label), str(animation)))
         menu_lookup = {animation: label for label, animation in menu_states if animation in self.animator.available_animations}
-        category_defs = self._available_category_definitions()
+        category_defs = self.behavior_controller.available_category_definitions()
         if category_defs:
             used: set[str] = set()
             for category in category_defs:
                 submenu = Menu(self.menu, tearoff=False)
                 added = False
-                for animation in category["animations"]:
+                for animation in category.animations:
                     if animation in menu_lookup:
                         submenu.add_command(label=menu_lookup[animation], command=lambda name=animation: self.play(name))
                         used.add(animation)
                         added = True
                 if added:
-                    self.menu.add_cascade(label=category["label"], menu=submenu)
+                    self.menu.add_cascade(label=category.label, menu=submenu)
             extras = [(label, animation) for label, animation in menu_states if animation not in used]
             if extras:
                 if self.menu.index("end") is not None:
@@ -162,6 +161,58 @@ class DesktopPet:
     def _move_window(self):
         self.root.geometry(f"{self.window_width}x{self.window_height}+{int(self.x)}+{int(self.y)}")
 
+    def capture_sensor_snapshot(self) -> SensorSnapshot:
+        """Capture current desktop geometry without changing runtime state."""
+        return SensorSnapshot(
+            cursor_x=self.root.winfo_pointerx(),
+            cursor_y=self.root.winfo_pointery(),
+            pet_x=self.x,
+            pet_y=self.y,
+            pet_width=self.window_width,
+            pet_height=self.window_height,
+            screen_x=0,
+            screen_y=0,
+            screen_width=self.screen_width,
+            screen_height=self.screen_height,
+        )
+
+    def calculate_chase_window_position(
+        self,
+        snapshot: SensorSnapshot,
+        target_x: float,
+        target_y: float,
+        speed: float,
+        delta_time: float,
+    ) -> tuple[float, float]:
+        """Calculate, but do not apply, a centre-anchored chase position."""
+        return calculate_chase_window_position_from_snapshot(snapshot, target_x, target_y, speed, delta_time)
+
+    def move_chase_window_once(
+        self,
+        snapshot: SensorSnapshot,
+        target_x: float,
+        target_y: float,
+        speed: float,
+        delta_time: float,
+    ) -> tuple[float, float]:
+        """Calculate and apply one explicit chase movement without scheduling it."""
+        new_x, new_y = self.calculate_chase_window_position(snapshot, target_x, target_y, speed, delta_time)
+        self.x = new_x
+        self.y = new_y
+        self._move_window()
+        return new_x, new_y
+
+    def demo_chase_cursor_once(self, speed: float, delta_time: float) -> tuple[float, float]:
+        """Run one explicit cursor-chase demo step without scheduling another."""
+        snapshot = self.capture_sensor_snapshot()
+        return self.move_chase_window_once(
+            snapshot,
+            snapshot.cursor_x,
+            snapshot.cursor_y,
+            speed,
+            delta_time,
+        )
+
     def _load_frames(self, animation: str, direction: int) -> list[ImageTk.PhotoImage]:
         key = (animation, direction)
         if key in self.frame_cache:
@@ -201,8 +252,7 @@ class DesktopPet:
         if animation not in self.animator.available_animations:
             animation = "idle"
         self.current_animation = animation
-        self.current_category = self._category_for_animation(animation)
-        self.animation_cooldowns[animation] = time.monotonic() + max(0.0, self.animation_cooldown_seconds)
+        self.behavior_controller.record_animation_played(animation)
         self.frame_index = 0
 
     def run(self):
@@ -252,162 +302,12 @@ class DesktopPet:
         if self.current_animation == "hatch" and not force:
             return
 
-        default_choices = [
-            ("idle", 24),
-            ("blink", 8),
-            ("walk", 12),
-            ("run", 18),
-            ("wave", 9),
-            ("happy", 7),
-            ("jump", 7),
-            ("sit", 5),
-            ("rest", 4),
-            ("curious", 4),
-            ("rubber_stretch", 3),
-            ("rubber_punch", 3),
-            ("rubber_reach", 2),
-            ("gear2", 2),
-            ("gear3", 1),
-            ("gear4", 1),
-            ("gear5", 1),
-            ("failed", 2),
-        ]
-        configured_choices = self.desktop_behavior.get("choices", default_choices)
-        choices = self._normalized_choices(configured_choices)
-        category_defs = self._available_category_definitions()
-        active_category = self._pick_active_category(category_defs, force=force)
-        if active_category:
-            scoped_choices = [(name, weight) for name, weight in choices if name in active_category["animations"]]
-            if not scoped_choices:
-                scoped_choices = choices
-        else:
-            scoped_choices = choices
-        available_choices = self._available_non_cooldown_choices(scoped_choices)
-        if not available_choices:
-            available_choices = self._available_non_cooldown_choices(choices)
-        if not available_choices:
-            available_choices = scoped_choices or choices
-        animation = random.choices([name for name, _weight in available_choices], [weight for _name, weight in available_choices])[0]
+        animation = self.behavior_controller.choose_next_action(force=force)
         if animation == "run" and random.random() < 0.35:
             self.direction *= -1
         self.play(animation)
-        self.category_attempts += 1
+        self.behavior_controller.record_choice_made()
         self.next_decision_frames = random.randint(14, 32)
-
-    def _available_non_cooldown_choices(self, choices):
-        now = time.monotonic()
-        return [(name, weight) for name, weight in choices if self.animation_cooldowns.get(name, 0.0) <= now]
-
-    def _normalized_choices(self, configured_choices):
-        choices = []
-        for item in configured_choices:
-            if isinstance(item, dict):
-                choices.append((str(item.get("animation", "idle")), int(item.get("weight", 1))))
-            else:
-                name, weight = item
-                choices.append((str(name), int(weight)))
-        return [(name, weight) for name, weight in choices if name in self.animator.available_animations]
-
-    def _random_category_switch_goal(self) -> int:
-        behavior = self.desktop_behavior.get("category_behavior", {})
-        minimum = int(behavior.get("attempts_before_switch_min", 2))
-        maximum = int(behavior.get("attempts_before_switch_max", max(minimum, 4)))
-        if maximum < minimum:
-            maximum = minimum
-        return random.randint(minimum, maximum)
-
-    def _available_category_definitions(self):
-        raw_behavior = self.desktop_behavior.get("category_behavior", {})
-        raw_categories = raw_behavior.get("categories")
-        if raw_categories:
-            category_defs = self._normalize_category_definitions(raw_categories)
-            if category_defs:
-                return category_defs
-        return self._default_category_definitions()
-
-    def _normalize_category_definitions(self, raw_categories):
-        categories = []
-        for index, raw in enumerate(raw_categories):
-            animations = [str(name) for name in raw.get("animations", []) if str(name) in self.animator.available_animations]
-            if not animations:
-                continue
-            categories.append(
-                {
-                    "id": str(raw.get("id", f"category_{index}")),
-                    "label": str(raw.get("label", raw.get("id", f"Category {index + 1}"))),
-                    "weight": max(1, int(raw.get("weight", 1))),
-                    "animations": animations,
-                }
-            )
-        return categories
-
-    def _default_category_definitions(self):
-        buckets = {
-            "core": {"label": "Core", "weight": 12, "animations": []},
-            "movement": {"label": "Movement", "weight": 10, "animations": []},
-            "rest": {"label": "Rest", "weight": 6, "animations": []},
-            "desktop": {"label": "Desktop", "weight": 6, "animations": []},
-            "social": {"label": "Social", "weight": 8, "animations": []},
-            "power": {"label": "Power", "weight": 6, "animations": []},
-            "special": {"label": "Special", "weight": 4, "animations": []},
-        }
-        for animation in self.animator.available_animations:
-            bucket_id = self._heuristic_category_id(animation)
-            buckets[bucket_id]["animations"].append(animation)
-        return [
-            {"id": key, "label": value["label"], "weight": value["weight"], "animations": value["animations"]}
-            for key, value in buckets.items()
-            if value["animations"]
-        ]
-
-    def _heuristic_category_id(self, animation: str) -> str:
-        name = animation.lower()
-        if name.startswith("gear") or name.startswith("rubber") or name in {"failed", "ko", "ko_ghost", "eat"}:
-            return "power"
-        if any(token in name for token in ("walk", "run", "jump", "drag", "cursor", "follow")):
-            return "movement"
-        if any(token in name for token in ("rest", "nap", "sleep", "sit", "drink")):
-            return "rest"
-        if any(token in name for token in ("peek", "hang", "folder")):
-            return "desktop"
-        if any(token in name for token in ("phone", "chat", "gaming", "laptop", "celebrate", "pet_play", "greet_pet")):
-            return "social"
-        if any(token in name for token in ("idle", "blink", "wave", "wink", "happy", "shy", "surprised", "confused", "thinking", "curious", "heart", "peace", "facepalm", "mischief")):
-            return "core"
-        return "special"
-
-    def _category_for_animation(self, animation: str) -> str | None:
-        for category in self._available_category_definitions():
-            if animation in category["animations"]:
-                return category["id"]
-        return None
-
-    def _pick_active_category(self, category_defs, force: bool = False):
-        if not category_defs:
-            return None
-        by_id = {category["id"]: category for category in category_defs}
-        behavior = self.desktop_behavior.get("category_behavior", {})
-        switch_probability = float(behavior.get("switch_probability", 0.4))
-        if self.current_category not in by_id:
-            preferred = str(behavior.get("initial_category", category_defs[0]["id"]))
-            self.current_category = preferred if preferred in by_id else self._weighted_category_choice(category_defs)
-            self.category_attempts = 0
-            self.category_switch_goal = self._random_category_switch_goal()
-        elif self.category_attempts >= self.category_switch_goal and (force or random.random() < switch_probability):
-            next_category = self._weighted_category_choice(category_defs, exclude=self.current_category)
-            if next_category:
-                self.current_category = next_category
-            self.category_attempts = 0
-            self.category_switch_goal = self._random_category_switch_goal()
-        return by_id.get(self.current_category)
-
-    def _weighted_category_choice(self, category_defs, exclude: str | None = None) -> str | None:
-        options = [category for category in category_defs if category["id"] != exclude]
-        if not options:
-            options = category_defs
-        if not options:
-            return None
-        return random.choices([category["id"] for category in options], [category["weight"] for category in options])[0]
 
 
 def parse_args():
@@ -415,6 +315,13 @@ def parse_args():
     parser.add_argument("--look", default="Ruffy", help="Legacy look name. Defaults to the Ruffy manifest.")
     parser.add_argument("--pet", default=DEFAULT_PET_ID, help="Pet id to load. Default: ruffy.")
     parser.add_argument("--list-pets", action="store_true", help="List available pet ids and exit.")
+    parser.add_argument(
+        "--demo-chase-cursor-once",
+        nargs=2,
+        type=float,
+        metavar=("SPEED", "DELTA_TIME"),
+        help="Run one explicit cursor-chase demo step before the normal main loop.",
+    )
     parser.add_argument(
         "--manifest",
         type=Path,
@@ -430,6 +337,7 @@ def available_pet_manifests(project_root: Path) -> dict[str, Path]:
     pets_root = project_root / "assets" / "pets"
     if pets_root.exists():
         for manifest in sorted(pets_root.glob("*/manifest.json")):
+            load_manifest(manifest)
             pets[manifest.parent.name] = manifest
     ruffy_manifest = project_root / "assets" / "ruffy_sprite_manifest.json"
     if ruffy_manifest.exists() and DEFAULT_PET_ID not in pets:
@@ -458,7 +366,11 @@ def main():
         raise FileNotFoundError(f"Sprite manifest not found: {manifest_path}")
 
     os.chdir(project_root)
-    DesktopPet(assets_dir=assets_dir, manifest_path=manifest_path, scale=args.scale).run()
+    pet = DesktopPet(assets_dir=assets_dir, manifest_path=manifest_path, scale=args.scale)
+    if args.demo_chase_cursor_once is not None:
+        speed, delta_time = args.demo_chase_cursor_once
+        pet.demo_chase_cursor_once(speed, delta_time)
+    pet.run()
 
 
 if __name__ == "__main__":

@@ -1,11 +1,12 @@
 from __future__ import annotations
 
-import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 from PIL import Image
+
+from manifest import load_manifest
 
 
 @dataclass(frozen=True)
@@ -20,13 +21,9 @@ class SpriteAnimator:
     def __init__(self, assets_dir: str | Path, manifest_path: str | Path):
         self.assets_dir = Path(assets_dir)
         self.manifest_path = Path(manifest_path)
-        self.manifest = self._load_manifest()
+        self.manifest = load_manifest(self.manifest_path).data
         self.sheet_path = self.assets_dir / self.manifest["image"]
         self.sheet = Image.open(self.sheet_path).convert("RGBA")
-
-    def _load_manifest(self) -> dict[str, Any]:
-        with self.manifest_path.open("r", encoding="utf-8") as handle:
-            return json.load(handle)
 
     @property
     def available_animations(self) -> list[str]:

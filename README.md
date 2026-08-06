@@ -114,6 +114,20 @@ Die Runtime nutzt `desktop_behavior` aus dem jeweiligen Manifest:
   ausgewaehlt wird
 - Drag-, Doppelklick- und Rechtsklick-Aktionen pro Pet
 
+## Manifest-Validierung
+
+Bestehende Manifeste ohne `schema_version` werden als Version 1 behandelt.
+Vor dem Start und in der Pack-Erkennung werden die statischen Runtime-Felder
+validiert. Fehler nennen Pack, Feldpfad und Ursache; optionale unbekannte
+Felder bleiben rückwärtskompatibel. PET2 bleibt trotz seines separaten
+QA-Status auswählbar.
+
+Headless-Tests und Manifest-Validierung ausführen:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
 ## QA
 
 PET1-QA:
