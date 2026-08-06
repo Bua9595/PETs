@@ -1,5 +1,20 @@
 # Godot rigged desktop-pet prototype
 
+## Validierter Checkpoint
+
+Der sichtbare Windows-Test war erfolgreich: Die Wave blieb vollstaendig im
+Canvas, schnelle weitere Leertastendruecke wurden verworfen, anschliessend
+kehrte die Figur zu `idle_breath` zurueck. Transparenz, Always-on-top,
+Click-through, Dragging und `Esc` blieben funktionsfaehig.
+
+Der isolierte Polygon-Rig-Checkpoint ist:
+
+`d6f874713905c2b0470751cee34faac24d0091a0`
+`Add validated Godot 2D rig prototype`
+
+Er verwendet weiterhin keine echten PET-Assets und ist keine produktive
+Godot-Migration.
+
 This is an isolated Godot 4.7 desktop-shell experiment. It uses only built-in
 `Polygon2D`, `Skeleton2D`, `Bone2D`, and `AnimationPlayer` nodes; it contains no
 PET assets and makes no change to the Python runtime.

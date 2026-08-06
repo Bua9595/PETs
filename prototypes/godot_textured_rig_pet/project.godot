@@ -1,0 +1,30 @@
+; Engine configuration file.
+; This prototype is self-contained and intentionally uses no PET assets.
+
+config_version=5
+
+[application]
+
+config/name="Godot Textured Rig Pet Prototype"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.7")
+boot_splash/show_image=false
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=720
+window/size/resizable=false
+window/size/borderless=true
+window/size/always_on_top=true
+window/size/transparent=true
+window/size/window_width_override=720
+window/size/window_height_override=720
+window/per_pixel_transparency/allowed=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 0)
+viewport/transparent_background=true

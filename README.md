@@ -16,7 +16,8 @@ Steuerung:
 - linke Maustaste ziehen: Pet verschieben
 - Doppelklick: pet-spezifische Hauptaktion
 - Rechtsklick: Animationsmenue
-- `Esc`: schliessen
+- `Esc`: Python/Tk-Verhalten weiterhin separat verifizieren; dies ist nicht
+  identisch mit dem erfolgreich validierten Esc-Verhalten der Godot-Prototypen.
 
 ## Source Of Truth
 
@@ -157,3 +158,31 @@ Der QA-Report prueft pro Animation `frames`, `min_margin_px`,
 - In dieser Umgebung kann das Tk-Fenster je nach Python/Tcl-Installation nicht
   sichtbar starten. `--list-pets`, Manifest-Load, Build und Atlas-Validierung
   sind pruefbar.
+
+## Entwicklungs-Checkpoints und Godot-Machbarkeit
+
+Die produktive Runtime bleibt derzeit `src/desktop_pet.py`. Die Godot-Projekte
+unter `prototypes/` sind bewusst isolierte Machbarkeitsprototypen und ersetzen
+die Python-Runtime noch nicht.
+
+- Python-Fundament: `c6686db Add behavior, manifest, sensor and chase foundations`.
+- Validierte Godot-Desktop-Shell:
+  `a64f3046bccebc6714dba59800e20cb880a02428`
+  (`Add validated Godot desktop pet shell prototype`).
+- Validierter Godot-Polygon-Rig-Prototyp:
+  `d6f874713905c2b0470751cee34faac24d0091a0`
+  (`Add validated Godot 2D rig prototype`).
+- Der texturierte Godot-Rig-Prototyp verwendet 21 externe SVG-Teile und einen
+  manifest-gesteuerten Aufbau. Er hat getrennte Pupillen, eine begrenzte
+  Cursor-Blickreaktion, die Animationen `idle_breath` und `wave`, eine
+  Wave-Burst-Sperre sowie ein statisches transparentes Action-Canvas. Der
+  sichtbare Windows-Test dieses Prototyps war erfolgreich.
+
+Bekannte offene Punkte:
+
+- Es gibt noch keine echten PET-Produktionsassets im Godot-Pfad.
+- Es gibt noch keine produktive Godot-Migration.
+- Ein Godot-Kontextmenue ist noch nicht implementiert.
+- Walk-/Chase-Verhalten fehlt im Godot-Pfad noch.
+- Die alten Pose-Sprites bleiben Referenzen, sind aber nicht der kuenftige
+  Hauptanimationspfad.

@@ -1,5 +1,19 @@
 # Godot Desktop Pet Shell Prototype
 
+## Validierter Checkpoint
+
+Der sichtbare Windows-Test dieser Shell war erfolgreich: transparenter und
+rahmenloser Hintergrund, Always-on-top, Click-through ausserhalb und in freien
+Bereichen der Silhouette, Dragging sowie `Esc` funktionierten. Der isolierte
+Checkpoint ist:
+
+`a64f3046bccebc6714dba59800e20cb880a02428`
+`Add validated Godot desktop pet shell prototype`
+
+Die Shell bleibt absichtlich ohne Rig, PET-Produktionsassets und Python-Runtime-
+Migration. Sie ist die validierte Desktop-Integrationsbasis fuer die weiteren
+Godot-Prototypen.
+
 Isolierter Godot-4-Windows-Prototyp zur Prüfung von transparentem, rahmenlosem
 Always-on-top-Fenster, polygonalem Maus-Passthrough, Dragging und Esc. Die helle
 `Polygon2D`-Silhouette ist direkt in `main.tscn` definiert und dient zugleich als
