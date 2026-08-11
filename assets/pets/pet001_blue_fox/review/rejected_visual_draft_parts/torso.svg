@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250">
+  <defs><linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#2c8be3"/><stop offset="1" stop-color="#1760c0"/></linearGradient></defs>
+  <path d="M114 23c17-15 34-20 56-20s39 5 56 20l42 31c7 37 4 75-12 107l-25 19H109l-25-19C68 129 65 91 72 54Z" fill="url(#hoodie)" stroke="#11183d" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m116 23 54 40 54-40 29 27-48 39h-70L87 50Z" fill="#122f66" stroke="#11183d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m130 50 40 31 40-31 12 12-52 43-52-43Z" fill="#20d4e5" stroke="#164c92" stroke-width="3"/>
+  <path d="m170 74 17 20-17 22-17-22Z" fill="#f5a927" stroke="#11183d" stroke-width="4"/>
+  <path d="m170 82 9 12-9 12-9-12Z" fill="#ffd86a"/>
+  <path d="M119 114h102l14 31-20 16h-90l-20-16Z" fill="#263b91" stroke="#11183d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m118 117-13 28M222 117l13 28" stroke="#ffc44d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M88 157h164v25H88Z" fill="#112d65" stroke="#11183d" stroke-width="6"/>
+  <path d="M91 178h76l3 9 3-9h76l12 58h-82l-9-35-9 35H79Z" fill="#17234f" stroke="#11183d" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M82 219h79M179 219h79" stroke="#20cfdf" stroke-width="9"/>
+  <path d="M169 183v35" stroke="#0d1738" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+</svg>

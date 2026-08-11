@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 235">
+  <defs>
+    <linearGradient id="ear_fur" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2389e5"/><stop offset=".55" stop-color="#185fc5"/><stop offset="1" stop-color="#16377f"/></linearGradient>
+    <linearGradient id="ear_inner" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffad68"/><stop offset="1" stop-color="#dc754f"/></linearGradient>
+  </defs>
+  <g fill="url(#ear_fur)" stroke="#11183d" stroke-width="6" stroke-linejoin="round">
+    <path d="M31 125C7 92 10 30 34 7c27 9 57 42 68 84l-31 39Z"/>
+    <path d="M189 125c24-33 21-95-3-118-27 9-57 42-68 84l31 39Z"/>
+    <path d="m37 113-20 11 19 12-14 15 33 1 19-31Z"/>
+    <path d="m183 113 20 11-19 12 14 15-33 1-19-31Z"/>
+  </g>
+  <path d="M31 99C24 68 28 36 39 21c19 14 36 37 45 66l-23 25Z" fill="url(#ear_inner)" stroke="#11183d" stroke-width="5"/>
+  <path d="M189 99c7-31 3-63-8-78-19 14-36 37-45 66l23 25Z" fill="url(#ear_inner)" stroke="#11183d" stroke-width="5"/>
+  <path d="M37 91c4-22 9-38 16-48 11 12 20 27 26 45l-16 17-7-18-7 14Z" fill="#fff0d0" stroke="#a65e46" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M183 91c-4-22-9-38-16-48-11 12-20 27-26 45l16 17 7-18 7 14Z" fill="#fff0d0" stroke="#a65e46" stroke-width="3" stroke-linejoin="round"/>
+</svg>

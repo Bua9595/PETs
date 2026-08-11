@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 235">
+  <defs><radialGradient id="head_fur" cx="44%" cy="28%" r="78%"><stop stop-color="#2da0ee"/><stop offset=".55" stop-color="#237bdc"/><stop offset="1" stop-color="#1854b5"/></radialGradient></defs>
+  <path d="M110 52c56 0 89 38 86 94-2 42-31 72-71 79l-15 7-15-7c-40-7-69-37-71-79-3-56 30-94 86-94Z" fill="url(#head_fur)" stroke="#11183d" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M39 149 18 160l23 12-13 15 38-2" fill="#1b64c5" stroke="#11183d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m181 149 21 11-23 12 13 15-38-2" fill="#1b64c5" stroke="#11183d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M69 76c13-10 27-15 41-15s28 5 41 15" fill="none" stroke="#64cfff" stroke-width="6" stroke-linecap="round" opacity=".65"/>
+</svg>

@@ -129,6 +129,13 @@ auto_calculate_length_and_angle = false
 length = 90.0
 bone_angle = -1.570796
 
+[node name="TailBone" type="Bone2D" parent="PetRoot/Rig/Skeleton2D/TorsoBone"]
+position = Vector2(157, 30)
+rest = Transform2D(1, 0, 0, 1, 157, 30)
+auto_calculate_length_and_angle = false
+length = 150.0
+bone_angle = 0.65
+
 [node name="LeftUpperArmBone" type="Bone2D" parent="PetRoot/Rig/Skeleton2D/TorsoBone"]
 position = Vector2(-66, 28)
 rotation_degrees = 13.0

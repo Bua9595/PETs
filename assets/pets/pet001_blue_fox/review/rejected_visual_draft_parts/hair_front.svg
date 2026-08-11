@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 235">
+  <defs><linearGradient id="tuft" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25b8f4"/><stop offset=".55" stop-color="#237edf"/><stop offset="1" stop-color="#1749a3"/></linearGradient></defs>
+  <path d="M76 74c7-29 21-48 38-61l-1 29c12-24 31-34 49-35-13 15-18 29-14 43 4 13 13 20 26 22-17 6-30 7-42 2-14-6-31-7-56 0Z" fill="url(#tuft)" stroke="#11183d" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M115 21c-2 17 0 30 7 40M151 19c-8 12-10 24-6 36" fill="none" stroke="#65e1ff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+</svg>
