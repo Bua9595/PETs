@@ -53,6 +53,10 @@ class ProductionPetValidatorTests(unittest.TestCase):
         template_manifest = PROJECT_ROOT / "assets/pets/production_template/metadata/pet_manifest.json"
         self.assertEqual(validate_pet_template_structure(template_manifest), [])
 
+    def test_blue_fox_production_pack_is_valid(self) -> None:
+        manifest = PROJECT_ROOT / "assets/pets/pet001_blue_fox/metadata/pet_manifest.json"
+        self.assertEqual(validate_pet_manifest(manifest), [])
+
     def test_rejects_missing_required_part(self) -> None:
         data = deepcopy(self.data)
         data["parts"] = [part for part in data["parts"] if part["part_id"] != "left_hand"]

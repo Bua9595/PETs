@@ -144,6 +144,11 @@ def _validate_bones(value: Any, errors: list[str]) -> set[str]:
         parent = bone.get("parent_bone")
         if parent is not None and parent not in names:
             errors.append(f"bones[{index}].parent_bone: unknown bone '{parent}'")
+        if _as_point(bone.get("rest_position")) is None:
+            errors.append(f"bones[{index}].rest_position: must be a coordinate pair")
+        rotation = bone.get("rest_rotation_degrees", 0)
+        if not _is_finite_number(rotation):
+            errors.append(f"bones[{index}].rest_rotation_degrees: must be a finite number")
     return names
 
 

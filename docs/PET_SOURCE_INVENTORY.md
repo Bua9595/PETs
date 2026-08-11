@@ -1,5 +1,18 @@
 # PET Source Inventory
 
+## Current production-rig source (2026-08-12)
+
+The sprite inventory below remains the historical inventory for the Python
+pose-sprite path. The separate manifest-driven Godot production path now has
+one technically validated pack:
+
+| Pack | Primary reference | Alternate reference | Rig parts | Status |
+| ---- | ----------------- | ------------------- | --------- | ------ |
+| `pet001_blue_fox` | `assets/pets/pet001_blue_fox/source/master_front_review_candidate_v2_five_fingers.png` | `assets/pets/pet001_blue_fox/source/alternate_hand_reference.png` | 30 manifest-loaded production parts under `parts/`, including separate tail and wave arm set | `needs_review`; technical and visible checkpoint completed |
+
+These reference PNGs are design inputs, not runtime sprites. The production parts
+and `metadata/pet_manifest.json` are the current rig sources of truth.
+
 > **Status 2026-06-27:** Alte Raw-/Review-/source_cell-Bildquellen wurden nach Backup unter `backups/deprecated_sprite_sources_20260627.zip` aus dem aktiven Projekt entfernt. Sie sind nicht mehr aktive Pipeline-Quelle. Neue Approved-Sprites müssen aus neu geprüften Einzelquellen oder neu erzeugten sauberen Sheets stammen.
 
 ## Zweck

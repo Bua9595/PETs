@@ -2,3 +2,5 @@ __pycache__/
 .env
 assets/*.pkl
 *.pyc
+runtime_regression*.log
+godot_final_check.log

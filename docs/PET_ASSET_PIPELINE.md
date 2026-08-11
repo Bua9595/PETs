@@ -1,5 +1,11 @@
 # PET Asset Pipeline
 
+> Scope note (2026-08-12): The rules below govern the Python pose-sprite/atlas
+> pipeline. New manifest-driven Godot rigs follow
+> `docs/PRODUCTION_PET_PIPELINE.md`; their external parts and manifest remain
+> pack-local under `assets/pets/<pet_id>/`. `pet001_blue_fox` is the first
+> technically validated pack on that path and remains `needs_review`.
+
 ## Ziel
 
 Diese Pipeline verhindert, dass schlechte Sprite-Sheets direkt in die Runtime gelangen.

@@ -1,5 +1,11 @@
 # PET Review Workflow
 
+> Scope note (2026-08-12): This document describes the historical pose-sprite
+> review path. Manifest-driven Godot production packs use
+> `docs/PRODUCTION_PET_PIPELINE.md` plus the pack-local `review/` record. The
+> first such pack, `pet001_blue_fox`, is technically validated and remains
+> `needs_review` for production approval.
+
 ## Ziel
 
 Dieses Dokument beschreibt, wie Sprite-Kandidaten geprüft und später freigegeben werden.

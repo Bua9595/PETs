@@ -1,5 +1,12 @@
 # PET Agent Contract
 
+> Pipeline note (2026-08-12): The `assets/source_approved/` rule below applies
+> to the historical pose-sprite pipeline. Manifest-driven Godot production pets
+> additionally follow `docs/PRODUCTION_PET_PIPELINE.md`, keep their reviewed
+> parts inside `assets/pets/<pet_id>/parts/`, and may not become `approved`
+> without the pack-local technical and visible review. `pet001_blue_fox` is
+> technically validated and remains `needs_review` for production approval.
+
 ## Projektziel
 
 Dieses Projekt baut lokale Desktop-Pets.

@@ -170,3 +170,16 @@ Status: vorbereitet
 | window_peek   | schaut hinter Fenster hervor | pending |
 | folder_play   | spielt mit Ordner            | pending |
 | hang_edge     | hängt an Kante               | pending |
+
+## PET001 — Blue Fox
+
+Status: `needs_review` production rig (Stand 2026-08-12)
+
+| State | Zweck | Status |
+| ----- | ----- | ------ |
+| `idle_breath` | ruhige, kontinuierliche Grundbewegung | implemented, visible checkpoint completed |
+| `look_at_cursor` | begrenzte Pupillenbewegung und leichte Kopfneigung | implemented, visible checkpoint completed |
+| `wave` | vollständige, nicht unterbrechbare Begrüßungsaktion | implemented, visible checkpoint completed |
+
+Blue Fox verwendet 30 manifest-geladene Produktionsparts und den gemeinsamen
+Godot-Loader. Der Pack ist noch nicht Teil der Python-Runtime.

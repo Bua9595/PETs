@@ -42,3 +42,21 @@ set a pack to `approved`.
 The template deliberately has no art files, so its initial `draft` manifest is
 expected to report missing required parts. It becomes technically valid only
 after a real original pet's 21 sources are supplied.
+
+## Current first production run
+
+`assets/pets/pet001_blue_fox/` is the first real pack exercising this contract.
+It has 30 manifest-loaded production parts plus a separately layered tail and
+wave arm set, a
+version-1 manifest, shared-loader integration, and documented reference history.
+The latest primary reference defines proportions and character styling. Older
+references remain audit history and do not override the reviewed primary hand
+geometry.
+
+The pack remains `needs_review` after its 2026-08-12 technical and visible
+checkpoint. Successful validation, headless startup, and the visible runtime
+check prove this checkpoint; broader production approval remains separate.
+
+```powershell
+& 'C:\Tools\Godot_v4.7.1-stable_win64.exe\Godot_v4.7.1-stable_win64.exe' --path 'prototypes\godot_textured_rig_pet' -- --pet-manifest='C:\Users\Bujupi\Desktop\PETs\assets\pets\pet001_blue_fox\metadata\pet_manifest.json'
+```

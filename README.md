@@ -178,9 +178,28 @@ die Python-Runtime noch nicht.
   Wave-Burst-Sperre sowie ein statisches transparentes Action-Canvas. Der
   sichtbare Windows-Test dieses Prototyps war erfolgreich.
 
+## Produktionspipeline und Blue Fox
+
+Die manifest-gesteuerte Produktionspipeline liegt in
+`assets/pets/production_template/`, der gemeinsame Godot-Loader in
+`godot/pet_manifest_loader.gd` und der technische Validator in
+`src/production_pet_validator.py`.
+
+`assets/pets/pet001_blue_fox/` ist der erste echte Durchlauf dieser Pipeline.
+Der Pack enthält 30 geladene Produktionsparts einschließlich separat
+gelayertem Schwanz und Wave-Arm-Set, dokumentierte Designreferenzen und ein
+Version-1-Manifest. Der visuell geprüfte Stand bleibt im Produktionsworkflow
+für weitere Freigabeschritte unter `needs_review`.
+
+```powershell
+python src/production_pet_validator.py assets/pets/pet001_blue_fox/metadata/pet_manifest.json
+& 'C:\Tools\Godot_v4.7.1-stable_win64.exe\Godot_v4.7.1-stable_win64.exe' --path 'prototypes\godot_textured_rig_pet' -- --pet-manifest='C:\Users\Bujupi\Desktop\PETs\assets\pets\pet001_blue_fox\metadata\pet_manifest.json'
+```
+
 Bekannte offene Punkte:
 
-- Es gibt noch keine echten PET-Produktionsassets im Godot-Pfad.
+- Der erste echte Godot-Produktionspack ist technisch validiert und noch nicht
+  Teil einer produktiven Python-Runtime.
 - Es gibt noch keine produktive Godot-Migration.
 - Ein Godot-Kontextmenue ist noch nicht implementiert.
 - Walk-/Chase-Verhalten fehlt im Godot-Pfad noch.
