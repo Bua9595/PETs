@@ -3,6 +3,10 @@ extends Node2D
 const DEFAULT_MANIFEST_PATH := "res://assets/rig_manifest.json"
 const SHARED_LOADER_RELATIVE_PATH := "../../godot/pet_manifest_loader.gd"
 const WAVE_BURST_COOLDOWN_MS := 600
+const CHASE_SPEED_PX_PER_SECOND := 300.0
+const CHASE_ARRIVAL_RADIUS_PX := 8.0
+
+enum PetState { IDLE, WAVE, CHASE, DRAG }
 
 var _dragging := false
 var _drag_offset := Vector2i.ZERO
@@ -22,6 +26,8 @@ var _right_pupil_base_position := Vector2.ZERO
 var _max_pupil_offset := Vector2(4, 3)
 var _max_head_tilt := 0.07
 var _cursor_radius := 180.0
+var _state := PetState.IDLE
+var _chase_target_global := Vector2.ZERO
 
 @onready var _pet_root: Node2D = $PetRoot
 @onready var _rig: Node2D = $PetRoot/Rig
@@ -67,18 +73,22 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if _dragging and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		_dragging = false
+	_recover_drag_if_button_released(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT))
 	if _wave_finished:
 		_try_release_wave_burst_lock()
+	if _state == PetState.CHASE:
+		_advance_chase(delta)
 	if not _dragging:
 		look_at_cursor(delta)
 
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_ESCAPE:
+		if _is_exit_key_event(event):
 			get_tree().quit()
+			return
+		if event.keycode == KEY_C:
+			request_chase_from_keypress()
 			return
 		if event.keycode == KEY_SPACE:
 			request_wave_from_keypress()
@@ -86,10 +96,9 @@ func _input(event: InputEvent) -> void:
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			_dragging = true
-			_drag_offset = DisplayServer.mouse_get_position() - get_window().position
+			_begin_drag()
 		else:
-			_dragging = false
+			_finish_drag()
 		return
 
 	if event is InputEventMouseMotion and _dragging:
@@ -97,6 +106,8 @@ func _input(event: InputEvent) -> void:
 
 
 func request_wave_from_keypress() -> void:
+	if _state != PetState.IDLE:
+		return
 	_last_space_request_msec = Time.get_ticks_msec()
 	if _wave_burst_locked:
 		print("wave_request_ignored=true")
@@ -104,11 +115,107 @@ func request_wave_from_keypress() -> void:
 	_wave_burst_locked = true
 	_wave_finished = false
 	_action_running = true
+	_state = PetState.WAVE
 	_wave_start_count += 1
 	_set_wave_parts_visible(true)
 	_set_passthrough_polygon(_wave_bounds, "wave")
 	print("wave_started_count=", _wave_start_count)
 	_animation_player.play(&"wave", 0.12)
+
+
+func request_chase_from_keypress() -> void:
+	if _state != PetState.IDLE:
+		return
+	if _wave_finished:
+		_try_release_wave_burst_lock()
+	_chase_target_global = Vector2(DisplayServer.mouse_get_position())
+	_state = PetState.CHASE
+	_set_passthrough_polygon(_idle_bounds, "idle")
+	_animation_player.play(&"idle_breath", 0.12)
+	print("chase_started=true target=", _chase_target_global)
+
+
+func _cancel_chase() -> void:
+	if _state != PetState.CHASE:
+		return
+	_state = PetState.DRAG
+	_animation_player.play(&"idle_breath", 0.12)
+	_set_passthrough_polygon(_idle_bounds, "idle")
+	print("chase_cancelled_for_drag=true")
+
+
+func _begin_drag() -> void:
+	if _state == PetState.WAVE:
+		_cleanup_wave(true)
+	elif _state == PetState.CHASE:
+		_cancel_chase()
+	_dragging = true
+	_state = PetState.DRAG
+	_drag_offset = DisplayServer.mouse_get_position() - get_window().position
+
+
+func _finish_drag() -> void:
+	if not _dragging and _state != PetState.DRAG:
+		return
+	_dragging = false
+	_state = PetState.IDLE
+	_restore_idle_visuals(0.12, false)
+
+
+func _recover_drag_if_button_released(left_button_pressed: bool) -> void:
+	if _state == PetState.DRAG and _dragging and not left_button_pressed:
+		_finish_drag()
+
+
+func _is_exit_key_event(event: InputEventKey) -> bool:
+	return event.pressed and not event.echo and event.keycode == KEY_ESCAPE
+
+
+func _advance_chase(delta: float) -> void:
+	var visible_center := _bounds_center(_idle_bounds)
+	var desired_window_position := _chase_target_global - visible_center
+	var clamped_target := _clamp_window_position(desired_window_position, _idle_bounds)
+	var current := Vector2(get_window().position)
+	var offset := clamped_target - current
+	if offset.length() <= CHASE_ARRIVAL_RADIUS_PX:
+		get_window().position = Vector2i(clamped_target.round())
+		_complete_chase()
+		print("chase_arrived=true")
+		return
+	var step := minf(CHASE_SPEED_PX_PER_SECOND * maxf(delta, 0.0), offset.length())
+	get_window().position = Vector2i((current + offset.normalized() * step).round())
+
+
+func _complete_chase() -> void:
+	_state = PetState.IDLE
+	_restore_idle_visuals(0.12, false)
+
+
+func _bounds_center(bounds: PackedVector2Array) -> Vector2:
+	if bounds.is_empty():
+		return Vector2.ZERO
+	var min_point := bounds[0]
+	var max_point := bounds[0]
+	for point in bounds:
+		min_point = min_point.min(point)
+		max_point = max_point.max(point)
+	return (min_point + max_point) * 0.5
+
+
+func _clamp_window_position(desired: Vector2, visible_bounds: PackedVector2Array) -> Vector2:
+	if visible_bounds.is_empty():
+		return desired
+	var min_point := visible_bounds[0]
+	var max_point := visible_bounds[0]
+	for point in visible_bounds:
+		min_point = min_point.min(point)
+		max_point = max_point.max(point)
+	var screen := DisplayServer.window_get_current_screen()
+	var usable := DisplayServer.screen_get_usable_rect(screen)
+	return Vector2(
+		clampf(desired.x, float(usable.position.x) - min_point.x, float(usable.end.x) - max_point.x),
+		clampf(desired.y, float(usable.position.y) - min_point.y, float(usable.end.y) - max_point.y)
+	)
 
 
 func look_at_cursor(delta: float) -> void:
@@ -136,12 +243,29 @@ func _apply_look_direction(normalized_look: Vector2, delta: float) -> void:
 
 
 func _on_animation_finished(animation_name: StringName) -> void:
-	if animation_name == &"wave":
-		_action_running = false
-		_wave_finished = true
-		_animation_player.play(&"idle_breath", 0.15)
-		_set_wave_parts_visible(false)
-		_set_passthrough_polygon(_idle_bounds, "idle")
+	if animation_name == &"wave" and _state == PetState.WAVE:
+		_cleanup_wave(false)
+		_state = PetState.IDLE
+		_try_release_wave_burst_lock()
+
+
+func _cleanup_wave(cancelled: bool) -> void:
+	_action_running = false
+	if cancelled:
+		_wave_finished = false
+		_wave_burst_locked = false
+		_restore_idle_visuals(0.0, true)
+		return
+	_wave_finished = true
+	_restore_idle_visuals(0.15, false)
+
+
+func _restore_idle_visuals(blend_seconds: float, reset_pose: bool) -> void:
+	_set_wave_parts_visible(false)
+	_set_passthrough_polygon(_idle_bounds, "idle")
+	_animation_player.play(&"idle_breath", blend_seconds)
+	if reset_pose:
+		_animation_player.seek(0.0, true)
 
 
 func _set_wave_parts_visible(wave_visible: bool) -> void:
@@ -160,6 +284,27 @@ func _try_release_wave_burst_lock() -> void:
 	_wave_finished = false
 	_wave_burst_locked = false
 	print("wave_burst_lock_released=true")
+
+
+func _wave_parts_match(expected_wave_visible: bool) -> bool:
+	var normal_arm := _parts_by_id.get("right_arm_render_surface") as Sprite2D
+	if normal_arm == null or normal_arm.visible == expected_wave_visible:
+		return false
+	for part_id in ["wave_right_upper_arm", "wave_right_lower_arm", "wave_right_hand"]:
+		var wave_part := _parts_by_id.get(part_id) as Sprite2D
+		if wave_part == null or wave_part.visible != expected_wave_visible:
+			return false
+	return true
+
+
+func _state_is_idle_clean() -> bool:
+	return (
+		_state == PetState.IDLE
+		and not _dragging
+		and not _action_running
+		and _wave_parts_match(false)
+		and _animation_player.current_animation == &"idle_breath"
+	)
 
 
 func _manifest_path_from_arguments() -> String:
@@ -353,6 +498,35 @@ func _run_production_checks() -> void:
 	for animation_name in [&"idle_breath", &"wave"]:
 		if not _animation_player.has_animation(animation_name):
 			failures.append("missing animation: %s" % animation_name)
+	if _idle_bounds.size() >= 3:
+		var idle_min := _idle_bounds[0]
+		var idle_max := _idle_bounds[0]
+		for point in _idle_bounds:
+			idle_min = idle_min.min(point)
+			idle_max = idle_max.max(point)
+		var usable := DisplayServer.screen_get_usable_rect(DisplayServer.window_get_current_screen())
+		var visible_size := idle_max - idle_min
+		if usable.size.x >= visible_size.x and usable.size.y >= visible_size.y:
+			var clamped_probe := _clamp_window_position(Vector2(-100000, -100000), _idle_bounds)
+			if clamped_probe.x + idle_min.x < usable.position.x or clamped_probe.y + idle_min.y < usable.position.y:
+				failures.append("chase clamp allows visible bounds off the usable screen")
+			if clamped_probe.x + idle_max.x > usable.end.x or clamped_probe.y + idle_max.y > usable.end.y:
+				failures.append("chase clamp allows visible bounds past the usable screen")
+		else:
+			print("chase_clamp_screen_check_skipped=headless_screen_too_small")
+
+	var previous_target := _chase_target_global
+	request_chase_from_keypress()
+	if _state != PetState.CHASE:
+		failures.append("chase did not enter CHASE state")
+	previous_target = _chase_target_global
+	request_chase_from_keypress()
+	if _chase_target_global != previous_target:
+		failures.append("second chase request changed the frozen target")
+	_cancel_chase()
+	_state = PetState.IDLE
+	_animation_player.play(&"idle_breath")
+	_set_passthrough_polygon(_idle_bounds, "idle")
 
 	var left_pupil := _parts_by_id.get("left_pupil") as Sprite2D
 	var right_pupil := _parts_by_id.get("right_pupil") as Sprite2D
@@ -389,6 +563,92 @@ func _run_production_checks() -> void:
 		await get_tree().process_frame
 	if _animation_player.current_animation != &"idle_breath":
 		failures.append("second wave did not return to idle_breath")
+	if not _state_is_idle_clean():
+		failures.append("regular wave completion did not leave a clean IDLE state")
+
+	_wave_burst_locked = false
+	_wave_finished = false
+	request_wave_from_keypress()
+	_on_animation_finished(&"wave")
+	if not _wave_burst_locked or not _wave_finished or _state != PetState.IDLE:
+		failures.append("early regular wave finish did not preserve its pending cooldown")
+	var wave_count_before_chase := _wave_start_count
+	request_chase_from_keypress()
+	if _state != PetState.CHASE:
+		failures.append("C after wave did not enter CHASE")
+	if _wave_burst_locked and not _wave_finished:
+		failures.append("chase disabled the pending wave cooldown release")
+	_last_space_request_msec = Time.get_ticks_msec() - WAVE_BURST_COOLDOWN_MS
+	_process(0.0)
+	if _wave_burst_locked or _wave_finished:
+		failures.append("wave cooldown did not release while CHASE was active")
+	_complete_chase()
+	if not _state_is_idle_clean():
+		failures.append("CHASE arrival did not return to a clean IDLE state")
+	_wave_burst_locked = false
+	_wave_finished = false
+	request_wave_from_keypress()
+	if _wave_start_count != wave_count_before_chase + 1:
+		failures.append("Space did not work after WAVE to CHASE sequence")
+	var wave_values := (_manifest.get("animations", {}) as Dictionary).get("wave", {}) as Dictionary
+	var upper_arm_offsets := wave_values.get("upper_arm_degrees", []) as Array
+	var max_pose_index := 0
+	var max_pose_magnitude := 0.0
+	for index in range(upper_arm_offsets.size()):
+		var magnitude := absf(float(upper_arm_offsets[index]))
+		if magnitude > max_pose_magnitude:
+			max_pose_magnitude = magnitude
+			max_pose_index = index
+	if upper_arm_offsets.size() > 1:
+		var max_pose_time := _animation_player.current_animation_length * float(max_pose_index) / float(upper_arm_offsets.size() - 1)
+		_animation_player.seek(max_pose_time, true)
+	_begin_drag()
+	if _state != PetState.DRAG or not _dragging:
+		failures.append("WAVE to DRAG did not enter DRAG")
+	if not _wave_parts_match(false) or _action_running or _wave_burst_locked or _wave_finished:
+		failures.append("WAVE to DRAG left wave parts or flags active")
+	var window_position_before_recovery := get_window().position
+	_recover_drag_if_button_released(false)
+	if not _state_is_idle_clean():
+		failures.append("lost mouse release did not recover DRAG to IDLE")
+	if get_window().position != window_position_before_recovery:
+		failures.append("lost mouse release recovery moved the window")
+
+	var wave_count_after_drag := _wave_start_count
+	request_wave_from_keypress()
+	if _wave_start_count != wave_count_after_drag + 1:
+		failures.append("Space did not work after WAVE to DRAG recovery")
+	_cleanup_wave(true)
+	_state = PetState.IDLE
+	request_chase_from_keypress()
+	if _state != PetState.CHASE:
+		failures.append("C did not work after WAVE to DRAG recovery")
+	_begin_drag()
+	if _state != PetState.DRAG or not _dragging:
+		failures.append("CHASE to DRAG did not enter DRAG")
+	_recover_drag_if_button_released(false)
+	if not _state_is_idle_clean():
+		failures.append("CHASE to DRAG did not return cleanly to IDLE")
+	var final_wave_count := _wave_start_count
+	request_wave_from_keypress()
+	if _wave_start_count != final_wave_count + 1:
+		failures.append("Space did not work after CHASE to DRAG sequence")
+	_cleanup_wave(true)
+	_state = PetState.IDLE
+	request_chase_from_keypress()
+	if _state != PetState.CHASE:
+		failures.append("C did not work after CHASE to DRAG sequence")
+	_complete_chase()
+
+	for state_value in [PetState.IDLE, PetState.WAVE, PetState.CHASE, PetState.DRAG]:
+		_state = state_value
+		var escape_event := InputEventKey.new()
+		escape_event.keycode = KEY_ESCAPE
+		escape_event.pressed = true
+		if not _is_exit_key_event(escape_event):
+			failures.append("Esc was not accepted from state %s" % state_value)
+	_state = PetState.IDLE
+	_restore_idle_visuals(0.0, true)
 
 	if failures.is_empty():
 		print("production_checks_passed=true")
